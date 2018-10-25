@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Neolution.CodeAnalysis</id>
-    <version>1.0.12</version>
+    <version>${version.txt}</version>
     <title>Neolution Code Analysis</title>
     <authors>Sandro Ciervo</authors>
     <owners>Neolution AG</owners>
