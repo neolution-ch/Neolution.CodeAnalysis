@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Neolution.CodeAnalysis.Tests</id>
+    <id>Neolution.CodeAnalysis.TestsRuleset</id>
     <version>{{version.txt}}</version>
     <title>Neolution Code Analysis for Test Projects</title>
     <authors>Sandro Ciervo</authors>
