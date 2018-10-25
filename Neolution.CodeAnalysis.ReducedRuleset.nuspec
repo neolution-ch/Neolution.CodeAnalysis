@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Neolution.CodeAnalysis.ReducedRuleset</id>
+    <version>1.0.0</version>
+    <title>Neolution Code Analysis Reduced Ruleset</title>
+    <authors>Sandro Ciervo</authors>
+    <owners>Neolution AG</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Configures Code Analysis for Neolution Projects with a reduced ruleset in Debug mode. This is suitable for complex projects where Code Analysis with the full ruleset takes too much time to complete.</description>
+    <dependencies>
+      <dependency id="StyleCop.Analyzers" version="1.0.2" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.6.2" />
+      <dependency id="SonarAnalyzer.CSharp" version="7.7.0.7192" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="build\Neolution.CodeAnalysis.Reduced.props" target="build\Neolution.CodeAnalysis.Reduced.props" />
+    <file src="Neolution.Reduced.ruleset" target="Neolution.Reduced.ruleset" />
+    <file src="Neolution.ruleset" target="Neolution.ruleset" />
+    <file src="stylecop.json" target="stylecop.json" />
+  </files>
+</package>

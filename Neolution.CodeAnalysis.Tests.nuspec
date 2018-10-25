@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Neolution.CodeAnalysis.Tests</id>
+    <version>1.0.0</version>
+    <title>Neolution Code Analysis for Test Projects</title>
+    <authors>Sandro Ciervo</authors>
+    <owners>Neolution AG</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Configures Code Analysis for Neolution Test Projects.</description>
+    <dependencies>
+      <dependency id="StyleCop.Analyzers" version="1.0.2" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.6.2" />
+      <dependency id="SonarAnalyzer.CSharp" version="7.7.0.7192" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="build\Neolution.CodeAnalysis.TestsRuleset.props" target="build\Neolution.CodeAnalysis.TestsRuleset.props" />
+    <file src="Neolution.ruleset" target="Neolution.ruleset" />
+    <file src="Neolution.Tests.ruleset" target="Neolution.Tests.ruleset" />
+    <file src="stylecop.json" target="stylecop.json" />
+  </files>
+</package>
