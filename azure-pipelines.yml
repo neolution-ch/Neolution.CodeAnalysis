@@ -10,5 +10,18 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- bash:  sed -i -e 's/${version.txt}/1.1.0-alpha/g' *.nuspec
+- bash:  |
+   version=$(<version.txt)
+   sed -i -e "s/{{version.txt}}/$version/g" *.nuspec **/*.props 
   displayName: 'Replace version number'
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    packagesToPack: '*.nuspec'
+- task: NuGetCommand@2
+  displayName: 'NuGet push'
+  inputs:
+    command: push
+    publishVstsFeed: 'dc68f94e-847b-4595-86ba-405d5744b21d'
+
