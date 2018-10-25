@@ -15,7 +15,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="build\Neolution.CodeAnalysis.Reduced.props" target="build\Neolution.CodeAnalysis.Reduced.props" />
+    <file src="build\Neolution.CodeAnalysis.ReducedRuleset.props" target="build\Neolution.CodeAnalysis.ReducedRuleset.props" />
     <file src="Neolution.Reduced.ruleset" target="Neolution.Reduced.ruleset" />
     <file src="Neolution.ruleset" target="Neolution.ruleset" />
     <file src="stylecop.json" target="stylecop.json" />
