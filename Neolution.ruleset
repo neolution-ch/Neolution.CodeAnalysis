@@ -273,7 +273,7 @@
     <Rule Id="CS8009" Action="Error" />
     <Rule Id="CS8012" Action="Error" />
     <Rule Id="CS8018" Action="Error" />
-    <Rule Id="CS8019" Action="Warning" />
+    <Rule Id="CS8019" Action="Error" />
     <Rule Id="CS8020" Action="Error" />
     <Rule Id="CS8021" Action="Error" />
     <Rule Id="CS8029" Action="Error" />
@@ -364,7 +364,7 @@
     <Rule Id="CA1052" Action="Error" />
     <Rule Id="CA1054" Action="Error" />
     <Rule Id="CA1055" Action="Error" />
-    <Rule Id="CA1056" Action="Error" />
+    <Rule Id="CA1056" Action="None" />
     <Rule Id="CA1060" Action="Error" />
     <Rule Id="CA1061" Action="Error" />
     <Rule Id="CA1063" Action="Error" />
@@ -379,7 +379,7 @@
     <Rule Id="CA1714" Action="Error" />
     <Rule Id="CA1715" Action="Error" />
     <Rule Id="CA1716" Action="Error" />
-    <Rule Id="CA1717" Action="Error" />
+    <Rule Id="CA1717" Action="None" />
     <Rule Id="CA1720" Action="Error" />
     <Rule Id="CA1721" Action="Error" />
     <Rule Id="CA1724" Action="Error" />
@@ -401,7 +401,7 @@
     <Rule Id="CA2219" Action="Error" />
     <Rule Id="CA2225" Action="Error" />
     <Rule Id="CA2226" Action="Error" />
-    <Rule Id="CA2227" Action="Error" />
+    <Rule Id="CA2227" Action="None" />
     <Rule Id="CA2231" Action="Error" />
     <Rule Id="CA2244" Action="Error" />
     <Rule Id="CA9999" Action="Error" />
@@ -426,7 +426,7 @@
     <Rule Id="CA2001" Action="Error" />
     <Rule Id="CA2109" Action="Error" />
     <Rule Id="CA2200" Action="Error" />
-    <Rule Id="CA2234" Action="Error" />
+    <Rule Id="CA2234" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.NetCore.Analyzers" RuleNamespace="Microsoft.NetCore.Analyzers">
     <Rule Id="CA1304" Action="Error" />
@@ -663,7 +663,6 @@
     <Rule Id="S3218" Action="Error" />
     <Rule Id="S3220" Action="Error" />
     <Rule Id="S3234" Action="Error" />
-    <Rule Id="S3235" Action="Error" />
     <Rule Id="S3236" Action="Error" />
     <Rule Id="S3237" Action="Error" />
     <Rule Id="S3240" Action="Error" />
@@ -770,7 +769,6 @@
     <Rule Id="S3998" Action="Error" />
     <Rule Id="S4000" Action="Error" />
     <Rule Id="S4002" Action="Error" />
-    <Rule Id="S4004" Action="Error" />
     <Rule Id="S4005" Action="Error" />
     <Rule Id="S4015" Action="Error" />
     <Rule Id="S4016" Action="Error" />

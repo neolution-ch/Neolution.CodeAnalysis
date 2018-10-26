@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="Neolution Tests Ruleset" Description="This ruleset applies only to projects that contain automated tests." ToolsVersion="15.0">
   <Include Path="neolution.ruleset" Action="Default" />
   <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
@@ -10,5 +10,9 @@
   </Rules>
   <Rules AnalyzerId="Microsoft.NetCore.CSharp.Analyzers" RuleNamespace="Microsoft.NetCore.CSharp.Analyzers">
     <Rule Id="CA2201" Action="None" />
+  </Rules>
+  <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
+    <Rule Id="S126" Action="None" />
+    <Rule Id="S131" Action="None" />
   </Rules>
 </RuleSet>
