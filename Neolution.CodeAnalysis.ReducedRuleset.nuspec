@@ -7,6 +7,7 @@
     <authors>Sandro Ciervo</authors>
     <owners>Neolution AG</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
     <description>Configures Code Analysis for Neolution Projects with a reduced ruleset in Debug mode. This is suitable for complex projects where Code Analysis with the full ruleset takes too much time to complete.</description>
     <dependencies>
       <dependency id="StyleCop.Analyzers" version="1.0.2" />

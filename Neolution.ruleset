@@ -764,7 +764,6 @@
     <Rule Id="S3993" Action="Error" />
     <Rule Id="S3994" Action="Error" />
     <Rule Id="S3995" Action="Error" />
-    <Rule Id="S3996" Action="Error" />
     <Rule Id="S3997" Action="Error" />
     <Rule Id="S3998" Action="Error" />
     <Rule Id="S4000" Action="Error" />
