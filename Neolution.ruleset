@@ -329,7 +329,8 @@
     <Rule Id="IDE0042" Action="Error" />
     <Rule Id="IDE0043" Action="Error" />
     <Rule Id="IDE0044" Action="Error" />
-    <Rule Id="IDE0045" Action="Error" />
+    <Rule Id="IDE0045" Action="None" />
+    <Rule Id="IDE0045WithoutSuggestion" Action="None" />
     <Rule Id="IDE0046" Action="Error" />
     <Rule Id="IDE0047" Action="Error" />
     <Rule Id="IDE0048" Action="Error" />
@@ -835,7 +836,6 @@
     <Rule Id="SA1002" Action="Error" />
     <Rule Id="SA1003" Action="Error" />
     <Rule Id="SA1004" Action="Error" />
-    <Rule Id="SA1005" Action="Error" />
     <Rule Id="SA1006" Action="Error" />
     <Rule Id="SA1007" Action="Error" />
     <Rule Id="SA1008" Action="Error" />
