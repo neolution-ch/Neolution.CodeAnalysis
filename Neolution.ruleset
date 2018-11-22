@@ -536,7 +536,7 @@
     <Rule Id="S1226" Action="Error" />
     <Rule Id="S1227" Action="Error" />
     <Rule Id="S1244" Action="Error" />
-    <Rule Id="S125" Action="Error" />
+    <Rule Id="S125" Action="Warning" />
     <Rule Id="S126" Action="Error" />
     <Rule Id="S1264" Action="Error" />
     <Rule Id="S127" Action="Error" />
