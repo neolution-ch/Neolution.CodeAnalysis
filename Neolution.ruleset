@@ -772,7 +772,7 @@
     <Rule Id="S4015" Action="Error" />
     <Rule Id="S4016" Action="Error" />
     <Rule Id="S4017" Action="Error" />
-    <Rule Id="S4018" Action="Error" />
+    <Rule Id="S4018" Action="None" />
     <Rule Id="S4019" Action="Error" />
     <Rule Id="S4022" Action="Error" />
     <Rule Id="S4023" Action="Error" />
