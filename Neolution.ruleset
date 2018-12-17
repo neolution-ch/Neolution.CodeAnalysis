@@ -391,7 +391,7 @@
     <Rule Id="CA1814" Action="Error" />
     <Rule Id="CA1815" Action="Error" />
     <Rule Id="CA1819" Action="Error" />
-    <Rule Id="CA1822" Action="Error" />
+    <Rule Id="CA1822" Action="None" />
     <Rule Id="CA1823" Action="Error" />
     <Rule Id="CA2007" Action="Error" />
     <Rule Id="CA2119" Action="Error" />
