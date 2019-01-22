@@ -10,6 +10,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: whitesource.ws-bolt.bolt.wss.WhiteSource Bolt@18
+  displayName: 'WhiteSource Bolt'
 - bash:  |
    version=$(<version.txt)
    sed -i -e "s/{{version.txt}}/$version/g" *.nuspec **/*.props 
