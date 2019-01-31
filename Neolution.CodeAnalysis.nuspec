@@ -16,7 +16,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="build\Neolution.CodeAnalysis.props" target="build\Neolution.CodeAnalysis.props" />
+    <file src="build\Neolution.CodeAnalysis.targets" target="build\Neolution.CodeAnalysis.targets" />
     <file src="Neolution.ruleset" target="Neolution.ruleset" />
     <file src="stylecop.json" target="stylecop.json" />
   </files>
