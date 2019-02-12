@@ -14,7 +14,7 @@ steps:
   displayName: 'WhiteSource Bolt'
 - bash:  |
    version=$(<version.txt)
-   sed -i -e "s/{{version.txt}}/$version/g" *.nuspec **/*.props 
+   sed -i -e "s/{{version.txt}}/$version/g" *.nuspec **/*.targets 
   displayName: 'Replace version number'
 - task: NuGetCommand@2
   displayName: 'NuGet pack'

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PackageName>Neolution.CodeAnalysis</PackageName>
+    <PackageName>Neolution.CodeAnalysis.TestsRuleset</PackageName>
     <PackageVersion>{{version.txt}}</PackageVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -10,8 +10,8 @@
     <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\packages\$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
   </PropertyGroup>
   <PropertyGroup>
-      <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.ruleset</CodeAnalysisRuleSet>
-      <DocumentationFile>bin\xmldoc\$(AssemblyName).xml</DocumentationFile>
+      <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Tests.ruleset</CodeAnalysisRuleSet>
+      <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>  
   <ItemGroup>
     <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)\stylecop.json" Link="stylecop.json" />

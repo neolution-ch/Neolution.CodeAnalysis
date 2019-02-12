@@ -10,13 +10,13 @@
     <developmentDependency>true</developmentDependency>
     <description>Configures Code Analysis for Neolution Projects with a reduced ruleset in Debug mode. This is suitable for complex projects where Code Analysis with the full ruleset takes too much time to complete.</description>
     <dependencies>
-      <dependency id="StyleCop.Analyzers" version="1.1.1-beta.61" />
-      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.6.2" />
+      <dependency id="StyleCop.Analyzers" version="1.1.1-rc.94" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.6.3" />
       <dependency id="SonarAnalyzer.CSharp" version="7.10.0.7896" />
     </dependencies>
   </metadata>
   <files>
-    <file src="build\Neolution.CodeAnalysis.ReducedRuleset.props" target="build\Neolution.CodeAnalysis.ReducedRuleset.props" />
+    <file src="build\Neolution.CodeAnalysis.ReducedRuleset.targets" target="build\Neolution.CodeAnalysis.ReducedRuleset.targets" />
     <file src="Neolution.Reduced.ruleset" target="Neolution.Reduced.ruleset" />
     <file src="Neolution.ruleset" target="Neolution.ruleset" />
     <file src="stylecop.json" target="stylecop.json" />
