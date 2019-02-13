@@ -11,7 +11,6 @@
   </PropertyGroup>
   <PropertyGroup>
       <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.ruleset</CodeAnalysisRuleSet>
-      <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>  
   <ItemGroup>
     <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)\stylecop.json" Link="stylecop.json" />
