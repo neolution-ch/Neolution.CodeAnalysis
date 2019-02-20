@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Neolution Coding Style" Description="These rules can discover critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. Include this rule set in any custom rule set you create for your projects." ToolsVersion="15.0">
+<RuleSet Name="Neolution Coding Style" Description="These rules can discover critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. Include this rule set in any custom rule set you create for your projects." ToolsVersion="16.0">
   <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
     <Rule Id="CA1002" Action="Error" />
     <Rule Id="CA1004" Action="Error" />
@@ -536,7 +536,6 @@
     <Rule Id="S1226" Action="Error" />
     <Rule Id="S1227" Action="Error" />
     <Rule Id="S1244" Action="Error" />
-    <Rule Id="S125" Action="Warning" />
     <Rule Id="S126" Action="Error" />
     <Rule Id="S1264" Action="Error" />
     <Rule Id="S127" Action="Error" />
@@ -772,7 +771,6 @@
     <Rule Id="S4015" Action="Error" />
     <Rule Id="S4016" Action="Error" />
     <Rule Id="S4017" Action="Error" />
-    <Rule Id="S4018" Action="None" />
     <Rule Id="S4019" Action="Error" />
     <Rule Id="S4022" Action="Error" />
     <Rule Id="S4023" Action="Error" />
@@ -962,7 +960,6 @@
     <Rule Id="SA1606" Action="Error" />
     <Rule Id="SA1607" Action="Error" />
     <Rule Id="SA1608" Action="Error" />
-    <Rule Id="SA1609" Action="None" />
     <Rule Id="SA1610" Action="Error" />
     <Rule Id="SA1611" Action="Error" />
     <Rule Id="SA1612" Action="Error" />
