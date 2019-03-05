@@ -131,7 +131,6 @@
     <Rule Id="CS0108" Action="Error" />
     <Rule Id="CS0109" Action="Error" />
     <Rule Id="CS0114" Action="Error" />
-    <Rule Id="CS0162" Action="Error" />
     <Rule Id="CS0164" Action="Error" />
     <Rule Id="CS0168" Action="Error" />
     <Rule Id="CS0183" Action="Error" />
