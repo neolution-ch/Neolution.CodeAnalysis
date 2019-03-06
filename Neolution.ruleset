@@ -433,7 +433,7 @@
     <Rule Id="CA1304" Action="Error" />
     <Rule Id="CA1305" Action="Error" />
     <Rule Id="CA1307" Action="Error" />
-    <Rule Id="CA1308" Action="Error" />
+    <Rule Id="CA1308" Action="None" />
     <Rule Id="CA1401" Action="Error" />
     <Rule Id="CA1813" Action="Error" />
     <Rule Id="CA1816" Action="Error" />
