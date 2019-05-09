@@ -15,8 +15,12 @@
   </PropertyGroup>  
   <ItemGroup>
     <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
+  </ItemGroup>  
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Tests.Debug.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Tests.Debug.Release.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>
