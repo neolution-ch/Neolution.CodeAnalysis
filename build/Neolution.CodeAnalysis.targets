@@ -10,17 +10,13 @@
     <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\packages\$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
   </PropertyGroup>
   <PropertyGroup>
-      <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.ruleset</CodeAnalysisRuleSet>
-      <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-  </PropertyGroup>  
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.$(Configuration).ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>  
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Debug.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Release.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>
