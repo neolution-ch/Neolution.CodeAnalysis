@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Neolution Tests Ruleset (Debug)" Description="This ruleset applies only to projects that contain automated tests." ToolsVersion="15.0">
+  <Include Path="neolution.debug.ruleset" Action="Default" />
+</RuleSet>

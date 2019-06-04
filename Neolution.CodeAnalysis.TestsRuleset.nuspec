@@ -10,15 +10,17 @@
     <developmentDependency>true</developmentDependency>
     <description>Configures Code Analysis for Neolution Test Projects.</description>
     <dependencies>
-      <dependency id="StyleCop.Analyzers" version="1.0.2" />
-      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.6.3" />
+      <dependency id="StyleCop.Analyzers" version="1.1.118" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.2" />
       <dependency id="SonarAnalyzer.CSharp" version="7.14.0.8411" />
     </dependencies>
   </metadata>
   <files>
     <file src="build\Neolution.CodeAnalysis.TestsRuleset.targets" target="build\Neolution.CodeAnalysis.TestsRuleset.targets" />
-    <file src="Neolution.ruleset" target="Neolution.ruleset" />
-    <file src="Neolution.Tests.ruleset" target="Neolution.Tests.ruleset" />
+    <file src="Neolution.Debug.ruleset" target="Neolution.Debug.ruleset" />
+    <file src="Neolution.Release.ruleset" target="Neolution.Release.ruleset" />
+    <file src="Neolution.Tests.Debug.ruleset" target="Neolution.Tests.Debug.ruleset" />
+    <file src="Neolution.Tests.Release.ruleset" target="Neolution.Tests.Release.ruleset" />
     <file src="stylecop.json" target="stylecop.json" />
   </files>
 </package>

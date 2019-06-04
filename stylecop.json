@@ -5,6 +5,12 @@
       "documentPrivateElements": true,
       "documentPrivateFields": true,
       "documentationCulture": "en-US"
+    },
+    "namingRules": {
+      "allowCommonHungarianPrefixes": true,
+      "allowedHungarianPrefixes": [
+        "db"
+      ]
     }
   }
 }
