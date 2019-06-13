@@ -991,8 +991,6 @@
     <Rule Id="RE0001WithoutSuggestion" Action="Error" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeAnalysis.Features" RuleNamespace="Microsoft.CodeAnalysis.Features">
-    <Rule Id="IDE0010" Action="Error" />
-    <Rule Id="IDE0010WithoutSuggestion" Action="Error" />
     <Rule Id="IDE0033" Action="Error" />
     <Rule Id="IDE0033WithoutSuggestion" Action="Error" />
     <Rule Id="IDE0044" Action="Error" />
@@ -1100,6 +1098,7 @@
     <Rule Id="EF1000" Action="Error" />
   </Rules>
   <Rules AnalyzerId="Microsoft.NetCore.Analyzers" RuleNamespace="Microsoft.NetCore.Analyzers">
+    <Rule Id="CA1303" Action="None" />
     <Rule Id="CA1304" Action="Error" />
     <Rule Id="CA1305" Action="Error" />
     <Rule Id="CA1307" Action="Error" />
@@ -1261,7 +1260,6 @@
     <Rule Id="S1450" Action="Error" />
     <Rule Id="S1479" Action="Error" />
     <Rule Id="S1481" Action="Error" />
-    <Rule Id="S1541" Action="None" />
     <Rule Id="S1607" Action="Error" />
     <Rule Id="S1643" Action="Error" />
     <Rule Id="S1656" Action="Error" />
@@ -1700,7 +1698,7 @@
     <Rule Id="SA1625" Action="Error" />
     <Rule Id="SA1626" Action="Error" />
     <Rule Id="SA1627" Action="Error" />
-    <Rule Id="SA1629" Action="Error" />
+    <Rule Id="SA1629" Action="None" />
     <Rule Id="SA1633" Action="None" />
     <Rule Id="SA1634" Action="Error" />
     <Rule Id="SA1635" Action="Error" />
