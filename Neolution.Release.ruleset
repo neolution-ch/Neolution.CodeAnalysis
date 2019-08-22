@@ -1493,7 +1493,7 @@
     <Rule Id="S4027" Action="Error" />
     <Rule Id="S4035" Action="Error" />
     <Rule Id="S4039" Action="Error" />
-    <Rule Id="S4040" Action="Error" />
+    <Rule Id="S4040" Action="None" />
     <Rule Id="S4041" Action="Error" />
     <Rule Id="S4047" Action="Error" />
     <Rule Id="S4049" Action="Error" />
