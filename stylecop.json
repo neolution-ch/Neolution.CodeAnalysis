@@ -9,7 +9,7 @@
     "namingRules": {
       "allowCommonHungarianPrefixes": true,
       "allowedHungarianPrefixes": [
-        "db"
+        "db", "ip"
       ]
     }
   }
