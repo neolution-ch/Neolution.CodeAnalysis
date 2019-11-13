@@ -11,8 +11,8 @@
     <description>Configures Code Analysis for Neolution Test Projects.</description>
     <dependencies>
       <dependency id="StyleCop.Analyzers" version="1.1.118" />
-      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.4" />
-      <dependency id="SonarAnalyzer.CSharp" version="7.16.0.8981" />
+      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.7" />
+      <dependency id="SonarAnalyzer.CSharp" version="8.0.0.9566" />
     </dependencies>
   </metadata>
   <files>
