@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="Neolution Coding Style" Description="These rules can discover critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. Include this rule set in any custom rule set you create for your projects." ToolsVersion="16.0">
   <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
     <Rule Id="CA1000" Action="Error" />
@@ -1167,7 +1167,6 @@
     <Rule Id="CA1824" Action="Error" />
     <Rule Id="CA1825" Action="Error" />
     <Rule Id="CA2010" Action="Error" />
-    <Rule Id="CA2201" Action="None" />
     <Rule Id="CA2205" Action="Error" />
     <Rule Id="CA2207" Action="Error" />
     <Rule Id="CA2215" Action="Error" />
@@ -1203,7 +1202,6 @@
     <Rule Id="S100" Action="Error" />
     <Rule Id="S1006" Action="Error" />
     <Rule Id="S101" Action="Error" />
-    <Rule Id="S103" Action="Error" />
     <Rule Id="S104" Action="Error" />
     <Rule Id="S1048" Action="Error" />
     <Rule Id="S105" Action="Error" />
@@ -1213,7 +1211,7 @@
     <Rule Id="S107" Action="Error" />
     <Rule Id="S1075" Action="Error" />
     <Rule Id="S108" Action="Error" />
-    <Rule Id="S109" Action="Error" />
+    <Rule Id="S109" Action="Info" />
     <Rule Id="S110" Action="Error" />
     <Rule Id="S1104" Action="Error" />
     <Rule Id="S1109" Action="Error" />
@@ -1300,7 +1298,6 @@
     <Rule Id="S2219" Action="Error" />
     <Rule Id="S2223" Action="Error" />
     <Rule Id="S2225" Action="Error" />
-    <Rule Id="S2228" Action="Error" />
     <Rule Id="S2234" Action="Error" />
     <Rule Id="S2245" Action="Error" />
     <Rule Id="S2255" Action="Error" />
@@ -1492,7 +1489,6 @@
     <Rule Id="S4027" Action="Error" />
     <Rule Id="S4035" Action="Error" />
     <Rule Id="S4039" Action="Error" />
-    <Rule Id="S4040" Action="None" />
     <Rule Id="S4041" Action="Error" />
     <Rule Id="S4047" Action="Error" />
     <Rule Id="S4049" Action="Error" />
@@ -1500,7 +1496,6 @@
     <Rule Id="S4052" Action="Error" />
     <Rule Id="S4056" Action="Error" />
     <Rule Id="S4057" Action="Error" />
-    <Rule Id="S4058" Action="None" />
     <Rule Id="S4059" Action="Error" />
     <Rule Id="S4060" Action="Error" />
     <Rule Id="S4061" Action="Error" />
