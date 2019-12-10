@@ -679,6 +679,7 @@
     <Rule Id="CS0108" Action="Error" />
     <Rule Id="CS0109" Action="Error" />
     <Rule Id="CS0114" Action="Error" />
+    <Rule Id="CS0162" Action="Error" />
     <Rule Id="CS0164" Action="Error" />
     <Rule Id="CS0168" Action="Error" />
     <Rule Id="CS0183" Action="Error" />
@@ -823,7 +824,7 @@
     <Rule Id="CS8009" Action="Error" />
     <Rule Id="CS8012" Action="Error" />
     <Rule Id="CS8018" Action="Error" />
-    <Rule Id="CS8019" Action="Warning" />
+    <Rule Id="CS8019" Action="Error" />
     <Rule Id="CS8020" Action="Error" />
     <Rule Id="CS8021" Action="Error" />
     <Rule Id="CS8029" Action="Error" />
@@ -905,7 +906,7 @@
     <Rule Id="IDE0003WithoutSuggestion" Action="None" />
     <Rule Id="IDE0004" Action="Error" />
     <Rule Id="IDE0004WithoutSuggestion" Action="Error" />
-    <Rule Id="IDE0005" Action="Warning" />
+    <Rule Id="IDE0005" Action="None" />
     <Rule Id="IDE0007" Action="Error" />
     <Rule Id="IDE0007WithoutSuggestion" Action="Error" />
     <Rule Id="IDE0008" Action="None" />
@@ -1223,6 +1224,7 @@
     <Rule Id="S1121" Action="Error" />
     <Rule Id="S1123" Action="Error" />
     <Rule Id="S1125" Action="Error" />
+    <Rule Id="S1128" Action="None" />
     <Rule Id="S113" Action="Error" />
     <Rule Id="S1134" Action="Error" />
     <Rule Id="S1135" Action="Info" />
@@ -1237,7 +1239,7 @@
     <Rule Id="S1185" Action="Error" />
     <Rule Id="S1186" Action="Error" />
     <Rule Id="S1192" Action="Error" />
-    <Rule Id="S1200" Action="Warning" />
+    <Rule Id="S1200" Action="Error" />
     <Rule Id="S1206" Action="Error" />
     <Rule Id="S121" Action="Error" />
     <Rule Id="S1210" Action="Error" />
@@ -1246,6 +1248,7 @@
     <Rule Id="S1226" Action="Error" />
     <Rule Id="S1227" Action="Error" />
     <Rule Id="S1244" Action="Error" />
+    <Rule Id="S125" Action="Error" />
     <Rule Id="S126" Action="Error" />
     <Rule Id="S1264" Action="Error" />
     <Rule Id="S127" Action="Error" />
@@ -1254,7 +1257,7 @@
     <Rule Id="S131" Action="Error" />
     <Rule Id="S1313" Action="Error" />
     <Rule Id="S134" Action="Error" />
-    <Rule Id="S138" Action="Warning" />
+    <Rule Id="S138" Action="Error" />
     <Rule Id="S1449" Action="Error" />
     <Rule Id="S1450" Action="Error" />
     <Rule Id="S1479" Action="Error" />
