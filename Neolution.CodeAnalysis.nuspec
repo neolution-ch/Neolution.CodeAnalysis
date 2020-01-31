@@ -4,7 +4,7 @@
     <id>Neolution.CodeAnalysis</id>
     <version>{{version.txt}}</version>
     <title>Neolution Code Analysis</title>
-    <authors>Sandro Ciervo</authors>
+    <authors>Neolution AG</authors>
     <owners>Neolution AG</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>

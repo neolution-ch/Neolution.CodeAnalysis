@@ -15,7 +15,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)\stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation.ToLower())\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Debug.ruleset</CodeAnalysisRuleSet>
