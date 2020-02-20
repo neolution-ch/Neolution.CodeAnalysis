@@ -10,7 +10,7 @@
     <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\packages\$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Release.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation.ToLower())\Neolution.Release.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
@@ -18,7 +18,7 @@
     <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation.ToLower())\stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Debug.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation.ToLower())\Neolution.Debug.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>

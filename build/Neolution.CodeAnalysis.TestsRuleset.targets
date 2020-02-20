@@ -10,7 +10,7 @@
     <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\packages\$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)\Neolution.Tests.$(Configuration).ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation.ToLower())\Neolution.Tests.$(Configuration).ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
