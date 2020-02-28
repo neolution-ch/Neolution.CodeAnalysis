@@ -5,16 +5,16 @@
     <PackageVersion>{{version.txt}}</PackageVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSetLocation Condition=" '$(NuGetPackageRoot)' != '' ">$(NuGetPackageRoot.ToLower())$(PackageName)\$(PackageVersion)</CodeAnalysisRuleSetLocation>
-    <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' and '$(SolutionDir)' != '' ">$(SolutionDir)packages\$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
-    <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))\packages\$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
+    <CodeAnalysisRuleSetLocation Condition=" '$(NuGetPackageRoot)' != '' ">$(NuGetPackageRoot.ToLower())$(PackageName.ToLower())/$(PackageVersion)</CodeAnalysisRuleSetLocation>
+    <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' and '$(SolutionDir)' != '' ">$(SolutionDir)packages/$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
+    <CodeAnalysisRuleSetLocation Condition=" '$(CodeAnalysisRuleSetLocation)' == '' ">$([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory)))/packages/$(PackageName).$(PackageVersion)</CodeAnalysisRuleSetLocation>
   </PropertyGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation.ToLower())\Neolution.Tests.$(Configuration).ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <CodeAnalysisRuleSet>$(CodeAnalysisRuleSetLocation)/Neolution.Tests.$(Configuration).ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation.ToLower())\stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="$(CodeAnalysisRuleSetLocation)/stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
