@@ -10,7 +10,7 @@
     <developmentDependency>true</developmentDependency>
     <description>Configures Code Analysis for Neolution Projects</description>
     <dependencies>
-      <dependency id="StyleCop.Analyzers" version="1.2.0-beta.164" />
+      <dependency id="StyleCop.Analyzers" version="1.1.118" />
       <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="2.9.8" />
       <dependency id="SonarAnalyzer.CSharp" version="8.0.0.9566" />
     </dependencies>
