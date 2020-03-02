@@ -1291,6 +1291,7 @@
     <Rule Id="S107" Action="Error" />
     <Rule Id="S1075" Action="Error" />
     <Rule Id="S108" Action="Error" />
+    <Rule Id="S109" Action="Info" />
     <Rule Id="S110" Action="Error" />
     <Rule Id="S1104" Action="Error" />
     <Rule Id="S1109" Action="Error" />
