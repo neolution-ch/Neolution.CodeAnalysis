@@ -9,12 +9,12 @@
     <Rule Id="CA1031" Action="None" />
     <Rule Id="CA1707" Action="None" />
   </Rules>
-  <Rules AnalyzerId="Microsoft.NetCore.CSharp.Analyzers" RuleNamespace="Microsoft.NetCore.CSharp.Analyzers">
-    <Rule Id="CA2201" Action="None" />
-  </Rules>
   <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
     <Rule Id="S112" Action="None" />
     <Rule Id="S126" Action="None" />
     <Rule Id="S131" Action="None" />
+  </Rules>
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA1402" Action="None" />
   </Rules>
 </RuleSet>
