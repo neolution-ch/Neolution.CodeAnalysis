@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Neolution.CodeAnalysis</id>
-    <version>{{version.txt}}</version>
+    <version>{{NuGetVersion}}</version>
     <title>Neolution Code Analysis</title>
     <authors>Neolution AG</authors>
     <owners>Neolution AG</owners>
