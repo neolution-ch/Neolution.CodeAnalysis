@@ -28,7 +28,7 @@ steps:
     targetType: 'inline'
     script: 'Write-Host "##vso[build.updatebuildnumber]$(NuGetVersion)"'
     
-- bash: 'sed -i -e "s/{{version.txt}}/$(NuGetVersion)/g" *.nuspec **/*.targets'
+- bash: 'sed -i -e "s/{{NuGetVersion}}/$(NuGetVersion)/g" *.nuspec **/*.targets'
   displayName: 'Replace version number'
   
 - task: NuGetCommand@2
