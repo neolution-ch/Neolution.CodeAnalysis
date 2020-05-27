@@ -1334,7 +1334,6 @@
     <Rule Id="S126" Action="Error" />
     <Rule Id="S1264" Action="Error" />
     <Rule Id="S127" Action="Error" />
-    <Rule Id="S1301" Action="Error" />
     <Rule Id="S1309" Action="Info" />
     <Rule Id="S131" Action="Error" />
     <Rule Id="S1313" Action="Error" />
