@@ -933,7 +933,7 @@
     <Rule Id="IDE0011WithoutSuggestion" Action="None" />
     <Rule Id="IDE0016" Action="Error" />
     <Rule Id="IDE0016WithoutSuggestion" Action="None" />
-    <Rule Id="IDE0017" Action="Error" />
+    <Rule Id="IDE0017" Action="Info" />
     <Rule Id="IDE0017WithoutSuggestion" Action="None" />
     <Rule Id="IDE0018" Action="Error" />
     <Rule Id="IDE0018WithoutSuggestion" Action="None" />
