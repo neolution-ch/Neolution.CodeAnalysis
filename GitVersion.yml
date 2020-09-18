@@ -1,6 +1,6 @@
 mode: Mainline
 branches:
-  master:
+  release:
     mode: ContinuousDeployment
 ignore:
   sha: []
