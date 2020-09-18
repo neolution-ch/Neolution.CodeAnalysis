@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 pool:
-  vmImage: 'Ubuntu 16.04'
+  vmImage: 'ubuntu-latest'
 
 trigger:
 - master
@@ -14,15 +14,29 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- bash:  |
-   version=$(<version.txt)
-   sed -i -e "s/{{version.txt}}/$version/g" *.nuspec **/*.targets 
+- task: gitversion/setup@0
+  displayName: Install GitVersion
+  inputs:
+    versionSpec: '5.x'
+
+- task: gitversion/execute@0
+  displayName: Execute GitVersion
+
+- task: PowerShell@2
+  displayName: Update Build Number
+  inputs:
+    targetType: 'inline'
+    script: 'Write-Host "##vso[build.updatebuildnumber]$(NuGetVersion)"'
+    
+- bash: 'sed -i -e "s/{{NuGetVersion}}/$(NuGetVersion)/g" *.nuspec **/*.targets'
   displayName: 'Replace version number'
+  
 - task: NuGetCommand@2
   displayName: 'NuGet pack'
   inputs:
     command: pack
     packagesToPack: '*.nuspec'
+    
 - task: NuGetCommand@2
   displayName: 'NuGet push'
   inputs:
