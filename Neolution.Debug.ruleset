@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="Neolution Coding Style (Debug)" Description="These rules can discover critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. Include this rule set in any custom rule set you create for your projects." ToolsVersion="16.0">
   <Rules AnalyzerId="Microsoft.AspNetCore.Mvc.Analyzers" RuleNamespace="Microsoft.AspNetCore.Mvc.Analyzers">
     <Rule Id="MVC1000" Action="None" />
@@ -237,6 +237,24 @@
     <Rule Id="CS8670" Action="None" />
     <Rule Id="CS8714" Action="None" />
     <Rule Id="CS8717" Action="None" />
+    <Rule Id="CS8762" Action="None" />
+    <Rule Id="CS8763" Action="None" />
+    <Rule Id="CS8764" Action="None" />
+    <Rule Id="CS8765" Action="None" />
+    <Rule Id="CS8766" Action="None" />
+    <Rule Id="CS8767" Action="None" />
+    <Rule Id="CS8768" Action="None" />
+    <Rule Id="CS8769" Action="None" />
+    <Rule Id="CS8770" Action="None" />
+    <Rule Id="CS8774" Action="None" />
+    <Rule Id="CS8775" Action="None" />
+    <Rule Id="CS8776" Action="None" />
+    <Rule Id="CS8777" Action="None" />
+    <Rule Id="CS8784" Action="None" />
+    <Rule Id="CS8785" Action="None" />
+    <Rule Id="CS8793" Action="None" />
+    <Rule Id="CS8794" Action="None" />
+    <Rule Id="CS8819" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Analyzers" RuleNamespace="Microsoft.CodeAnalysis.CSharp.Analyzers">
     <Rule Id="RS1002" Action="None" />
@@ -267,6 +285,8 @@
     <Rule Id="IDE0008WithoutSuggestion" Action="None" />
     <Rule Id="IDE0009" Action="None" />
     <Rule Id="IDE0009WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0010" Action="None" />
+    <Rule Id="IDE0010WithoutSuggestion" Action="None" />
     <Rule Id="IDE0011" Action="None" />
     <Rule Id="IDE0011WithoutSuggestion" Action="None" />
     <Rule Id="IDE0016" Action="None" />
@@ -304,6 +324,8 @@
     <Rule Id="IDE0036WithoutSuggestion" Action="None" />
     <Rule Id="IDE0037" Action="None" />
     <Rule Id="IDE0037WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0038" Action="None" />
+    <Rule Id="IDE0038WithoutSuggestion" Action="None" />
     <Rule Id="IDE0039" Action="None" />
     <Rule Id="IDE0039WithoutSuggestion" Action="None" />
     <Rule Id="IDE0040" Action="None" />
@@ -346,6 +368,20 @@
     <Rule Id="IDE0065" Action="None" />
     <Rule Id="IDE0066" Action="None" />
     <Rule Id="IDE0066WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0071" Action="None" />
+    <Rule Id="IDE0071WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0072" Action="None" />
+    <Rule Id="IDE0072WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0073" Action="None" />
+    <Rule Id="IDE0073WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0074" Action="None" />
+    <Rule Id="IDE0074WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0075" Action="None" />
+    <Rule Id="IDE0075WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0076" Action="None" />
+    <Rule Id="IDE0077" Action="None" />
+    <Rule Id="IDE0080" Action="None" />
+    <Rule Id="IDE0080WithoutSuggestion" Action="None" />
     <Rule Id="IDE1005" Action="None" />
     <Rule Id="IDE1005WithoutSuggestion" Action="None" />
     <Rule Id="IDE1006" Action="None" />
@@ -362,6 +398,8 @@
     <Rule Id="IDE0044WithoutSuggestion" Action="None" />
     <Rule Id="IDE0055" Action="None" />
     <Rule Id="IDE0055WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0070" Action="None" />
+    <Rule Id="IDE0070WithoutSuggestion" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeAnalysis.VersionCheckAnalyzer" RuleNamespace="Microsoft.CodeAnalysis.VersionCheckAnalyzer">
     <Rule Id="CA9999" Action="None" />
@@ -392,6 +430,7 @@
     <Rule Id="CA1066" Action="None" />
     <Rule Id="CA1067" Action="None" />
     <Rule Id="CA1068" Action="None" />
+    <Rule Id="CA1069" Action="None" />
     <Rule Id="CA1707" Action="None" />
     <Rule Id="CA1710" Action="None" />
     <Rule Id="CA1712" Action="None" />
@@ -409,9 +448,11 @@
     <Rule Id="CA1814" Action="None" />
     <Rule Id="CA1815" Action="None" />
     <Rule Id="CA1819" Action="None" />
+    <Rule Id="CA1821" Action="None" />
     <Rule Id="CA1822" Action="None" />
     <Rule Id="CA1823" Action="None" />
     <Rule Id="CA2007" Action="None" />
+    <Rule Id="CA2011" Action="None" />
     <Rule Id="CA2119" Action="None" />
     <Rule Id="CA2211" Action="None" />
     <Rule Id="CA2214" Action="None" />
@@ -453,10 +494,13 @@
     <Rule Id="CA2002" Action="None" />
     <Rule Id="CA2008" Action="None" />
     <Rule Id="CA2009" Action="None" />
+    <Rule Id="CA2012" Action="None" />
+    <Rule Id="CA2013" Action="None" />
     <Rule Id="CA2100" Action="None" />
     <Rule Id="CA2101" Action="None" />
     <Rule Id="CA2208" Action="None" />
     <Rule Id="CA2213" Action="None" />
+    <Rule Id="CA2215" Action="None" />
     <Rule Id="CA2216" Action="None" />
     <Rule Id="CA2229" Action="None" />
     <Rule Id="CA2235" Action="None" />
@@ -469,7 +513,6 @@
     <Rule Id="CA5351" Action="None" />
     <Rule Id="CA5359" Action="None" />
     <Rule Id="CA5360" Action="None" />
-    <Rule Id="CA5361" Action="None" />
     <Rule Id="CA5363" Action="None" />
     <Rule Id="CA5364" Action="None" />
     <Rule Id="CA5365" Action="None" />
@@ -481,12 +524,7 @@
     <Rule Id="CA5372" Action="None" />
     <Rule Id="CA5373" Action="None" />
     <Rule Id="CA5374" Action="None" />
-    <Rule Id="CA5376" Action="None" />
-    <Rule Id="CA5377" Action="None" />
-    <Rule Id="CA5378" Action="None" />
     <Rule Id="CA5379" Action="None" />
-    <Rule Id="CA5380" Action="None" />
-    <Rule Id="CA5381" Action="None" />
     <Rule Id="CA5384" Action="None" />
     <Rule Id="CA5385" Action="None" />
     <Rule Id="CA5397" Action="None" />
@@ -735,6 +773,7 @@
     <Rule Id="S5034" Action="None" />
     <Rule Id="S5542" Action="None" />
     <Rule Id="S5547" Action="None" />
+    <Rule Id="S5773" Action="None" />
     <Rule Id="S818" Action="None" />
     <Rule Id="S907" Action="None" />
     <Rule Id="S927" Action="None" />

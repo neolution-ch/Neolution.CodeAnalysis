@@ -321,6 +321,12 @@
     <Rule Id="C26811" Action="Error" />
     <Rule Id="C26812" Action="Error" />
     <Rule Id="C26814" Action="Error" />
+    <Rule Id="C26815" Action="Error" />
+    <Rule Id="C26816" Action="Error" />
+    <Rule Id="C26817" Action="Error" />
+    <Rule Id="C26818" Action="Error" />
+    <Rule Id="C26819" Action="Error" />
+    <Rule Id="C26820" Action="Error" />
     <Rule Id="C28020" Action="Error" />
     <Rule Id="C28021" Action="Error" />
     <Rule Id="C28022" Action="Error" />
@@ -898,6 +904,22 @@
     <Rule Id="CS8717" Action="Error" />
     <Rule Id="CS8762" Action="Error" />
     <Rule Id="CS8763" Action="Error" />
+    <Rule Id="CS8764" Action="Error" />
+    <Rule Id="CS8765" Action="Error" />
+    <Rule Id="CS8766" Action="Error" />
+    <Rule Id="CS8767" Action="Error" />
+    <Rule Id="CS8768" Action="Error" />
+    <Rule Id="CS8769" Action="Error" />
+    <Rule Id="CS8770" Action="Error" />
+    <Rule Id="CS8774" Action="Error" />
+    <Rule Id="CS8775" Action="Error" />
+    <Rule Id="CS8776" Action="Error" />
+    <Rule Id="CS8777" Action="Error" />
+    <Rule Id="CS8784" Action="Error" />
+    <Rule Id="CS8785" Action="Error" />
+    <Rule Id="CS8793" Action="Error" />
+    <Rule Id="CS8794" Action="Error" />
+    <Rule Id="CS8819" Action="Error" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Analyzers" RuleNamespace="Microsoft.CodeAnalysis.CSharp.Analyzers">
     <Rule Id="RS1002" Action="Error" />
@@ -968,6 +990,8 @@
     <Rule Id="IDE0036WithoutSuggestion" Action="None" />
     <Rule Id="IDE0037" Action="Error" />
     <Rule Id="IDE0037WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0038" Action="Error" />
+    <Rule Id="IDE0038WithoutSuggestion" Action="None" />
     <Rule Id="IDE0039" Action="Error" />
     <Rule Id="IDE0039WithoutSuggestion" Action="None" />
     <Rule Id="IDE0040" Action="Error" />
@@ -1015,6 +1039,16 @@
     <Rule Id="IDE0071WithoutSuggestion" Action="None" />
     <Rule Id="IDE0072" Action="Error" />
     <Rule Id="IDE0072WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0073" Action="Error" />
+    <Rule Id="IDE0073WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0074" Action="Error" />
+    <Rule Id="IDE0074WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0075" Action="Error" />
+    <Rule Id="IDE0075WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0076" Action="Error" />
+    <Rule Id="IDE0077" Action="Error" />
+    <Rule Id="IDE0080" Action="Error" />
+    <Rule Id="IDE0080WithoutSuggestion" Action="None" />
     <Rule Id="IDE1005" Action="Error" />
     <Rule Id="IDE1005WithoutSuggestion" Action="None" />
     <Rule Id="IDE1006" Action="Error" />
@@ -1639,6 +1673,7 @@
     <Rule Id="S5034" Action="Error" />
     <Rule Id="S5542" Action="Error" />
     <Rule Id="S5547" Action="Error" />
+    <Rule Id="S5773" Action="Error" />
     <Rule Id="S818" Action="Error" />
     <Rule Id="S881" Action="Error" />
     <Rule Id="S907" Action="Error" />
