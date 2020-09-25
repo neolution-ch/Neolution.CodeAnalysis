@@ -8,6 +8,7 @@
   <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
     <Rule Id="CA1031" Action="None" />
     <Rule Id="CA1707" Action="None" />
+    <Rule Id="CA2007" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.NetCore.CSharp.Analyzers" RuleNamespace="Microsoft.NetCore.CSharp.Analyzers">
     <Rule Id="CA2201" Action="None" />
