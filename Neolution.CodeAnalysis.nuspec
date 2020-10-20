@@ -12,7 +12,7 @@
     <dependencies>
       <dependency id="StyleCop.Analyzers" version="1.1.118" />
       <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="3.3.0" />
-      <dependency id="SonarAnalyzer.CSharp" version="8.13.1.21947" />
+      <dependency id="SonarAnalyzer.CSharp" version="8.14.0.22654" />
     </dependencies>
   </metadata>
   <files>
