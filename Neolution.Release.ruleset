@@ -1678,7 +1678,6 @@
     <Rule Id="S4069" Action="Error" />
     <Rule Id="S4070" Action="Error" />
     <Rule Id="S4136" Action="Error" />
-    <Rule Id="S4142" Action="Error" />
     <Rule Id="S4143" Action="Error" />
     <Rule Id="S4144" Action="Error" />
     <Rule Id="S4158" Action="Error" />
