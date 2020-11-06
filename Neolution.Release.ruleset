@@ -1037,7 +1037,7 @@
     <Rule Id="IDE0066WithoutSuggestion" Action="None" />
     <Rule Id="IDE0071" Action="Error" />
     <Rule Id="IDE0071WithoutSuggestion" Action="None" />
-    <Rule Id="IDE0072" Action="Error" />
+    <Rule Id="IDE0072" Action="Info" />
     <Rule Id="IDE0072WithoutSuggestion" Action="None" />
     <Rule Id="IDE0073" Action="Error" />
     <Rule Id="IDE0073WithoutSuggestion" Action="None" />
@@ -1379,7 +1379,7 @@
     <Rule Id="S1066" Action="Error" />
     <Rule Id="S1067" Action="Error" />
     <Rule Id="S107" Action="Error" />
-    <Rule Id="S1075" Action="Error" />
+    <Rule Id="S1075" Action="Info" />
     <Rule Id="S108" Action="Error" />
     <Rule Id="S109" Action="Info" />
     <Rule Id="S110" Action="Error" />
