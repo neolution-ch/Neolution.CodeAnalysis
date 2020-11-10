@@ -110,7 +110,9 @@
     <Rule Id="IDE0075WithoutSuggestion" Action="None" />
     <Rule Id="IDE0080" Action="None" />
     <Rule Id="IDE0080WithoutSuggestion" Action="None" />
+    <Rule Id="IDE1005" Action="None" />
     <Rule Id="IDE1005WithoutSuggestion" Action="None" />
+    <Rule Id="IDE1006" Action="None" />
     <Rule Id="IDE1006WithoutSuggestion" Action="None" />
     <Rule Id="RE0001" Action="None" />
     <Rule Id="RE0001WithoutSuggestion" Action="None" />
