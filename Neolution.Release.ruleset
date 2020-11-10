@@ -176,7 +176,6 @@
     <Rule Id="CA2147" Action="Error" />
     <Rule Id="CA2149" Action="Error" />
     <Rule Id="CA2151" Action="Error" />
-    <Rule Id="CA2200" Action="Error" />
     <Rule Id="CA2202" Action="Error" />
     <Rule Id="CA2204" Action="Error" />
     <Rule Id="CA2205" Action="Error" />
@@ -1049,9 +1048,9 @@
     <Rule Id="IDE0077" Action="Error" />
     <Rule Id="IDE0080" Action="Error" />
     <Rule Id="IDE0080WithoutSuggestion" Action="None" />
-    <Rule Id="IDE1005" Action="Error" />
+    <Rule Id="IDE1005" Action="Warning" />
     <Rule Id="IDE1005WithoutSuggestion" Action="None" />
-    <Rule Id="IDE1006" Action="Error" />
+    <Rule Id="IDE1006" Action="Warning" />
     <Rule Id="IDE1006WithoutSuggestion" Action="None" />
     <Rule Id="RE0001" Action="Error" />
     <Rule Id="RE0001WithoutSuggestion" Action="None" />
@@ -1149,6 +1148,7 @@
     <Rule Id="CA2011" Action="Error" />
     <Rule Id="CA2109" Action="Error" />
     <Rule Id="CA2119" Action="Error" />
+    <Rule Id="CA2200" Action="None" />
     <Rule Id="CA2211" Action="Error" />
     <Rule Id="CA2214" Action="Error" />
     <Rule Id="CA2217" Action="Error" />
@@ -1182,7 +1182,7 @@
     <Rule Id="CA1821" Action="Error" />
     <Rule Id="CA2001" Action="Error" />
     <Rule Id="CA2109" Action="Error" />
-    <Rule Id="CA2200" Action="Error" />
+    <Rule Id="CA2200" Action="None" />
     <Rule Id="CA2234" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.EntityFrameworkCore.Analyzers" RuleNamespace="Microsoft.EntityFrameworkCore.Analyzers">
