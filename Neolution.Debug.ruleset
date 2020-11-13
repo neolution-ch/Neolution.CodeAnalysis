@@ -482,7 +482,6 @@
     <Rule Id="CA2249" Action="None" />
     <Rule Id="CA3061" Action="None" />
     <Rule Id="CA5350" Action="None" />
-    <Rule Id="CA5351" Action="None" />
     <Rule Id="CA5359" Action="None" />
     <Rule Id="CA5360" Action="None" />
     <Rule Id="CA5363" Action="None" />
