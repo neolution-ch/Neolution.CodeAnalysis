@@ -6,13 +6,19 @@ on:
   push:
     branches:
       - main
-
+env:
+  ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
+  DOTNET_VERSION: "6.x"
+  
 jobs:
   publish:
     name: build, pack & publish
     runs-on: ubuntu-latest
     steps:    
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7
@@ -22,26 +28,27 @@ jobs:
       - name: Determine Version
         uses: gittools/actions/gitversion/execute@v0.9.7
         
-      # Run dotnet build and package
       - name: Replace version number
         run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec **/*.targets'
 
-      # Publish
-      - name: publish on version change
-        id: publish_nuget
-        uses: rohith/publish-nuget@v2
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v1.0.5
+          
+      # Run dotnet build and package
+      - name: dotnet build and publish
+        run: "nuget pack Neolution.CodeAnalysis.nuspec"
+          
+      # Setup .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
         with:
-          # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Neolution.CodeAnalysis/Neolution.CodeAnalysis.nuspec
-                    
-          # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
-          # VERSION_STATIC: 1.0.0
-
-          # Flag to toggle git tagging, enabled by default
-          # TAG_COMMIT: true
-
-          # Format of the git tag, [*] gets replaced with actual version
-          # TAG_FORMAT: v*
-
-          # API key to authenticate with NuGet server
-          # NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          source-url: ${{ env.ARTIFACTS_FEED_URL }}
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
+          
+      # Publish the package to Azure Artifacts
+      - name: "dotnet publish"
+        run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/bin/Release/*.nupkg
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
