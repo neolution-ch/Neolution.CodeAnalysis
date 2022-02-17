@@ -34,7 +34,7 @@ jobs:
           
       # Run dotnet build and package
       - name: dotnet build and publish
-        run: "nuget pack *.nuspec"
+        run: "nuget pack Neolution.CodeAnalysis.nuspec"
           
       # Publish the package to Azure Artifacts
       #- name: "dotnet publish"
