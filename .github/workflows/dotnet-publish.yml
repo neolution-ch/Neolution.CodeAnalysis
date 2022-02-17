@@ -12,7 +12,10 @@ jobs:
     name: build, pack & publish
     runs-on: ubuntu-latest
     steps:    
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7
