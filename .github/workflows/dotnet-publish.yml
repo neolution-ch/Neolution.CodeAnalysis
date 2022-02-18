@@ -49,6 +49,6 @@ jobs:
           
       # Publish the package to Nuget.org
       - name: "dotnet publish"
-        run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/bin/Release/*.nupkg
+        run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/*.nupkg
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
