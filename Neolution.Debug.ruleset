@@ -182,7 +182,7 @@
     <Rule Id="CS8600" Action="None" />
     <Rule Id="CS8601" Action="None" />
     <Rule Id="CS8602" Action="None" />
-    <Rule Id="CS8603" Action="None" />
+    <Rule Id="CS8603" Action="Warning" />
     <Rule Id="CS8604" Action="None" />
     <Rule Id="CS8605" Action="None" />
     <Rule Id="CS8607" Action="None" />
