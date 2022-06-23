@@ -9,7 +9,6 @@ on:
 
 env:
   ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
-  DOTNET_VERSION: "6.x"
   
 jobs:
   publish:
@@ -21,36 +20,27 @@ jobs:
         with:
           fetch-depth: 0 # Needed for GitVersion to function correctly
           
-      # Setup .NET Core SDK
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
-          source-url: ${{ env.ARTIFACTS_FEED_URL }}
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
-          
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7
         with:
           versionSpec: '5.x'
           
-      - name: Determine Version
+      - name: Determine version number with GitVersion
         uses: gittools/actions/gitversion/execute@v0.9.7
         
-      - name: Replace version number
+      - name: Replace version number in nuspec files
         run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec **/*.targets'
 
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.5
           
-      - name: Pack main package
+      - name: Create main package
         run: nuget pack Neolution.CodeAnalysis.nuspec
           
-      - name: Pack TestsRuleset package
+      - name: Create TestsRuleset package
         run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
           
-      - name: Push all packages
+      - name: Push all packages to Nuget.org
         run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/*.nupkg
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
