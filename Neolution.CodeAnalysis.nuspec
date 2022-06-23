@@ -5,10 +5,11 @@
     <version>{{NuGetVersion}}</version>
     <title>Neolution Code Analysis</title>
     <authors>Neolution AG</authors>
-    <owners>Neolution AG</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <description>Configures Code Analysis for Neolution Projects</description>
+    <projectUrl>https://github.com/neolution-ch/Neolution.CodeAnalysis</projectUrl>
+    <license type="expression">MIT</license>
     <dependencies>
       <dependency id="StyleCop.Analyzers" version="1.1.118" />
       <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="3.3.1" />
