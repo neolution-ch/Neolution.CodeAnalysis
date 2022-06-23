@@ -1,19 +1,18 @@
-# https://docs.microsoft.com/en-us/azure/devops/artifacts/quickstarts/github-actions?view=azure-devops
-name: Publish NuGet package
+name: CI
 
 on:
   push:
-    tags: 
-      - 'v*.*.*'
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
-
+  
 env:
-  ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
   DOTNET_VERSION: "6.x"
   
 jobs:
   publish:
-    name: build, pack & publish
+    name: build & pack
     runs-on: ubuntu-latest
     steps:    
       - name: Checkout
@@ -26,9 +25,6 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
-          source-url: ${{ env.ARTIFACTS_FEED_URL }}
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
           
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7
@@ -50,7 +46,3 @@ jobs:
       - name: Pack TestsRuleset package
         run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
           
-      - name: Push all packages
-        run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/*.nupkg
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
