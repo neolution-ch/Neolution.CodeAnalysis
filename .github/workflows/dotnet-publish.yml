@@ -9,7 +9,6 @@ on:
 
 env:
   ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
-  DOTNET_VERSION: "6.x"
   
 jobs:
   publish:
@@ -20,15 +19,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Needed for GitVersion to function correctly
-          
-      # Setup .NET Core SDK
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
-          source-url: ${{ env.ARTIFACTS_FEED_URL }}
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
           
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.7
