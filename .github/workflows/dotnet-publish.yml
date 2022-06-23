@@ -2,10 +2,11 @@
 name: Publish NuGet package
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main
+    tags: 
+      - 'v*.*.*'
+  workflow_dispatch:
+
 env:
   ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
   DOTNET_VERSION: "6.x"
@@ -43,12 +44,13 @@ jobs:
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.5
           
-      # Run dotnet pack
-      - name: dotnet build and publish
-        run: "nuget pack Neolution.CodeAnalysis.nuspec"
+      - name: Pack main package
+        run: nuget pack Neolution.CodeAnalysis.nuspec
           
-      # Publish the package to Nuget.org
-      - name: "dotnet publish"
+      - name: Pack TestsRuleset package
+        run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
+          
+      - name: Push all packages
         run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/*.nupkg
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
