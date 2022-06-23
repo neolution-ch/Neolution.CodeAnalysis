@@ -25,22 +25,22 @@ jobs:
         with:
           versionSpec: '5.x'
           
-      - name: Determine Version
+      - name: Determine version number with GitVersion
         uses: gittools/actions/gitversion/execute@v0.9.7
         
-      - name: Replace version number
+      - name: Replace version number in nuspec files
         run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec **/*.targets'
 
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.5
           
-      - name: Pack main package
+      - name: Create main package
         run: nuget pack Neolution.CodeAnalysis.nuspec
           
-      - name: Pack TestsRuleset package
+      - name: Create TestsRuleset package
         run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
           
-      - name: Push all packages
+      - name: Push all packages to Nuget.org
         run: dotnet nuget push --skip-duplicate -k $NUGET_AUTH_TOKEN  **/*.nupkg
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
