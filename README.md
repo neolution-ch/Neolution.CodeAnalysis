@@ -90,18 +90,6 @@ As stated in *General decisions*, in **Release** configuration, all rules will t
       <td>This rule probably originates from Java where you have to declare the Exception that will be throwed by a method and will subsequently being checked by the compiler.</td>
     </tr>
     <tr>
-      <td>CA2210</td>
-      <td>None</td>
-      <td>Assemblies should have valid strong names</td>
-      <td>Strong names are usually not needed for our typical deployments.</td>
-    </tr>
-    <tr>
-      <td>CA1020</td>
-      <td>None</td>
-      <td>Avoid namespaces with few types</td>
-      <td>It happens often that a namespace contains only a few classes, but is extended later during development. Merging it with some parent namespace at first and extracting to separate namespace later (when there are enough classes), is just a pain and unnecessary waste of time.</td>
-    </tr>
-    <tr>
       <td>CA1024</td>
       <td>None</td>
       <td>Use properties where appropriate</td>
@@ -178,12 +166,6 @@ As stated in *General decisions*, in **Release** configuration, all rules will t
       <td>Info</td>
       <td>Track uses of "TODO" tags</td>
       <td>Still show it to the developer in his IDE.</td>
-    </tr>
-    <tr>
-      <td>CS1591</td>
-      <td>None</td>
-      <td>Missing XML comment for publicly visible type or member 'Type_or_Member'</td>
-      <td>Can be deactivated because SA1600 already checks for the XML comment.</td>
     </tr>
     <tr>
       <td>IDE0058</td>
