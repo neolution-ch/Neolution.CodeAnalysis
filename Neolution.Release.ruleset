@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="Neolution Coding Style" Description="These rules can discover critical problems in your code, including potential security holes, application crashes, and other important logic and design errors. Include this rule set in any custom rule set you create for your projects." ToolsVersion="16.0">
   <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
     <Rule Id="CA1000" Action="Error" />
@@ -1295,7 +1295,7 @@
     <Rule Id="S1121" Action="Error" />
     <Rule Id="S1123" Action="Error" />
     <Rule Id="S1125" Action="Error" />
-    <Rule Id="S1128" Action="None" />
+    <Rule Id="S1128" Action="Error" />
     <Rule Id="S113" Action="Error" />
     <Rule Id="S1134" Action="Error" />
     <Rule Id="S1135" Action="Info" />
