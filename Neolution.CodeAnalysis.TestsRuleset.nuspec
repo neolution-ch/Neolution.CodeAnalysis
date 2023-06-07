@@ -12,18 +12,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <dependencies>
-      <dependency id="StyleCop.Analyzers" version="1.1.118" />
-      <dependency id="Microsoft.CodeAnalysis.FxCopAnalyzers" version="3.3.1" />
-      <dependency id="SonarAnalyzer.CSharp" version="8.52.0.60960" />
+      <dependency id="StyleCop.Analyzers" version="1.2.0-beta.435" />
+      <dependency id="SonarAnalyzer.CSharp" version="8.51.0.59060" />
     </dependencies>
   </metadata>
   <files>
-    <file src="build\Neolution.CodeAnalysis.TestsRuleset.targets" target="build\Neolution.CodeAnalysis.TestsRuleset.targets" />
-    <file src="Neolution.Debug.ruleset" target="Neolution.Debug.ruleset" />
-    <file src="Neolution.Release.ruleset" target="Neolution.Release.ruleset" />
-    <file src="Neolution.Tests.Debug.ruleset" target="Neolution.Tests.Debug.ruleset" />
-    <file src="Neolution.Tests.Release.ruleset" target="Neolution.Tests.Release.ruleset" />
-    <file src="stylecop.json" target="stylecop.json" />
+    <file src="build\Neolution.CodeAnalysis.TestsRuleset.props" target="build\Neolution.CodeAnalysis.TestsRuleset.props" />
+    <file src="build\Neolution.Tests.globalconfig" target="build\Neolution.Tests.globalconfig" />
+    <file src="build\stylecop.json" target="build\stylecop.json" />
     <file src="README.md" target="docs\" />
   </files>
 </package>

@@ -26,7 +26,7 @@ jobs:
         uses: gittools/actions/gitversion/execute@v0.9.7
         
       - name: Replace version number in nuspec files
-        run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec **/*.targets'
+        run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec **/*.props'
 
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.0.5
