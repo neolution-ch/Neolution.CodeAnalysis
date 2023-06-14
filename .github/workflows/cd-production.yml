@@ -23,7 +23,7 @@ jobs:
         run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec **/*.targets'
 
       - name: Setup NuGet.exe for use with actions
-        uses: NuGet/setup-nuget@v1.0.5
+        uses: NuGet/setup-nuget@v1.2.0
           
       - name: Create main package
         run: nuget pack Neolution.CodeAnalysis.nuspec
