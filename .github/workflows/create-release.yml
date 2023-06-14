@@ -50,12 +50,12 @@ jobs:
         run: |
           params=()
 
-          if [[ major != "no-version-update" ]]; then
-              params+=(major)
+          if [[ ${{ github.event.inputs.version_type }} != "no-version-update" ]]; then
+              params+=(${{ github.event.inputs.version_type }})
           fi
 
-          if [[ rc != "stable" ]]; then
-              params+=(--preRelease=rc)
+          if [[ ${{ github.event.inputs.pre_release }} != "stable" ]]; then
+              params+=(--preRelease=${{ github.event.inputs.pre_release }})
               params+=(--plugins.@release-it/keep-a-changelog.keepUnreleased)
               params+=(--no-plugins.@release-it/keep-a-changelog.strictLatest)
           fi
