@@ -32,7 +32,7 @@ jobs:
       - name: Create TestsRuleset package
         run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
           
-      #- name: Push all packages to Nuget.org
-      #  run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN  **/*.nupkg
-      #  env:
-      #    NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
+      - name: Push all packages to Nuget.org
+        run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN  **/*.nupkg
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
