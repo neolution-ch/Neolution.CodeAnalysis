@@ -17,3 +17,12 @@ and adheres to a project-specific [Versioning](/README.md).
 ### Removed
 
 - Removed FxCop Analyzer because it is now bundled with .NET SDK
+
+## [2.7.1] - 2023-06-14
+
+### Added
+
+- Changelog
+
+[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.1...HEAD
+[2.7.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.0...v2.7.1

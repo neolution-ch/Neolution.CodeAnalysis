@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+   
+jobs:
+  publish:
+    name: build & pack
+    runs-on: ubuntu-latest
+    steps:    
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Determine version for NuGet package
+        run: echo NUGET_VERSION=0.$(date '+%Y.%m')-ci.$(date '+%d%H%M%S') >> $GITHUB_ENV
+      
+      - name: Replace version number in nuspec files
+        run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec **/*.targets'
+
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v1.2.0
+          
+      - name: Create main package
+        run: nuget pack Neolution.CodeAnalysis.nuspec
+          
+      - name: Create TestsRuleset package
+        run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
