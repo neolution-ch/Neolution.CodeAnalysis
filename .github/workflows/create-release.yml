@@ -7,10 +7,10 @@ on:
         type: choice
         description: Semantic Version Type
         options:
+          - auto
           - patch
           - minor
           - major
-          - no-version-update
 
       pre_release:
         type: choice
@@ -50,7 +50,7 @@ jobs:
         run: |
           params=()
 
-          if [[ ${{ github.event.inputs.version_type }} != "no-version-update" ]]; then
+          if [[ ${{ github.event.inputs.version_type }} != "auto" ]]; then
               params+=(${{ github.event.inputs.version_type }})
           fi
 
