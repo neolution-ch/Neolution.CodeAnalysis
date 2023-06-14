@@ -20,7 +20,7 @@ jobs:
         run: echo NUGET_VERSION=${GITHUB_REF#refs/tags/v} >> $GITHUB_ENV
       
       - name: Replace version number in nuspec files
-        run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec **/*.props'
+        run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec'
 
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.2.0
