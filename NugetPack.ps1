@@ -7,7 +7,7 @@ if (-not (Test-Path $nugetPath)) {
 
 $date = Get-Date -format "yyyy.M.d"
 $time = Get-Date -format "HHmmss"
-$versionString = $date + "-beta" + $time
+$versionString = $date + "-dev" + $time
 Write-Output "Version: $versionString"
 
 Get-ChildItem -Include *.nuspec, *.props -Recurse | ForEach-Object {
