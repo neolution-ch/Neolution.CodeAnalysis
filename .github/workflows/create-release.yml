@@ -50,18 +50,19 @@ jobs:
         run: |
           params=()
 
-          if [[ ${{ github.event.inputs.version_type }} != "no-version-update" ]]; then
-              params+=(${{ github.event.inputs.version_type }})
+          if [[ major != "no-version-update" ]]; then
+              params+=(major)
           fi
 
-          if [[ ${{ github.event.inputs.pre_release }} != "stable" ]]; then
-              params+=(--preRelease=${{ github.event.inputs.pre_release }})
+          if [[ rc != "stable" ]]; then
+              params+=(--preRelease=rc)
               params+=(--plugins.@release-it/keep-a-changelog.keepUnreleased)
               params+=(--no-plugins.@release-it/keep-a-changelog.strictLatest)
           fi
 
           params+=(--ci)
 
-          release-it -y "${params[@]}"
+          echo "command: release-it ${params[@]}"
+          release-it "${params[@]}"
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
