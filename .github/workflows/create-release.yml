@@ -68,7 +68,7 @@ jobs:
     
       - name: Get next release number
         run: |
-          echo "RELEASE_VERSION=$(release-it --release-version --dry-run)" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=$(npx release-it --release-version --dry-run)" >> $GITHUB_ENV
 
       - name: Print release version
         run: echo "The next release number is ${{ env.RELEASE_VERSION }}"
