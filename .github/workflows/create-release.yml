@@ -7,10 +7,10 @@ on:
         type: choice
         description: Semantic Version Type
         options:
-          - major
-          - minor
-          - patch
           - no-version-update
+          - patch
+          - minor
+          - major
 
       pre_release:
         type: choice
@@ -65,27 +65,3 @@ jobs:
           release-it -y "${params[@]}"
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
-    
-      - name: Get next release number
-        id: release
-        run: echo "::set-output name=version::$(npx release-it --release-version --dry-run)"
-  
-      - name: Print release version
-        run: echo "The next release number is ${{ steps.release.outputs.version }}"
-    
-      - name: Replace version number in nuspec files
-        run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec'
-      
-      - name: Setup NuGet.exe for use with actions
-        uses: NuGet/setup-nuget@v1.0.5
-          
-      - name: Create main package
-        run: nuget pack Neolution.CodeAnalysis.nuspec
-          
-      - name: Create TestsRuleset package
-        run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
-          
-      #- name: Push all packages to Nuget.org
-      #  run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN  **/*.nupkg
-      #  env:
-      #    NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
