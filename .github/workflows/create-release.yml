@@ -1,0 +1,91 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_type:
+        type: choice
+        description: Semantic Version Type
+        options:
+          - major
+          - minor
+          - patch
+          - no-version-update
+
+      pre_release:
+        type: choice
+        description: Pre Release?
+        options:
+          - stable
+          - alpha
+          - beta
+          - rc
+
+jobs:
+  release-it:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.RELEASE_BOT_APP_ID }}
+          private_key: ${{ secrets.RELEASE_BOT_APP_PRIVATE_KEY }}
+
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          # we need everything so release-it can compare the current version with the latest tag
+          fetch-depth: 0
+
+      - name: initialize mandatory git config
+        run: |
+          git config user.name "GitHub Release Bot"
+          git config user.email release-bot@neolution.ch
+
+      - name: install @release-it/keep-a-changelog
+        run: npm install -g release-it @release-it/keep-a-changelog
+
+      - name: run release-it
+        run: |
+          params=()
+
+          if [[ ${{ github.event.inputs.version_type }} != "no-version-update" ]]; then
+              params+=(${{ github.event.inputs.version_type }})
+          fi
+
+          if [[ ${{ github.event.inputs.pre_release }} != "stable" ]]; then
+              params+=(--preRelease=${{ github.event.inputs.pre_release }})
+              params+=(--plugins.@release-it/keep-a-changelog.keepUnreleased)
+              params+=(--no-plugins.@release-it/keep-a-changelog.strictLatest)
+          fi
+
+          params+=(--ci)
+
+          release-it -y "${params[@]}"
+        env:
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+    
+      - name: Get next release number
+        run: |
+          echo "RELEASE_VERSION=$(release-it --release-version --dry-run)" >> $GITHUB_ENV
+
+      - name: Print release version
+        run: echo "The next release number is ${{ env.RELEASE_VERSION }}"
+    
+      - name: Replace version number in nuspec files
+        run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec'
+      
+      - name: Setup NuGet.exe for use with actions
+        uses: NuGet/setup-nuget@v1.0.5
+          
+      - name: Create main package
+        run: nuget pack Neolution.CodeAnalysis.nuspec
+          
+      - name: Create TestsRuleset package
+        run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
+          
+      - name: Push all packages to Nuget.org
+        run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN  **/*.nupkg
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
