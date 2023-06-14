@@ -2,10 +2,8 @@
 name: Publish NuGet package
 
 on:
-  push:
-    tags: 
-      - 'v*.*.*'
-  workflow_dispatch:
+  release:
+    types: [published]
 
 env:
   ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
@@ -16,23 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:    
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Needed for GitVersion to function correctly
-          
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.7
-        with:
-          versionSpec: '5.x'
-          
-      - name: Determine version number with GitVersion
-        uses: gittools/actions/gitversion/execute@v0.9.7
-        
+        uses: actions/checkout@v3
+      
+      - name: Determine version for NuGet package
+        run: echo NUGET_VERSION=${GITHUB_REF#refs/tags/v} >> $GITHUB_ENV
+      
       - name: Replace version number in nuspec files
-        run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec **/*.targets'
+        run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec **/*.targets'
 
       - name: Setup NuGet.exe for use with actions
-        uses: NuGet/setup-nuget@v1.0.5
+        uses: NuGet/setup-nuget@v1.2.0
           
       - name: Create main package
         run: nuget pack Neolution.CodeAnalysis.nuspec
