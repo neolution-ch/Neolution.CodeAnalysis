@@ -7,10 +7,10 @@ on:
         type: choice
         description: Semantic Version Type
         options:
-          - no-version-update
           - patch
           - minor
           - major
+          - no-version-update
 
       pre_release:
         type: choice
