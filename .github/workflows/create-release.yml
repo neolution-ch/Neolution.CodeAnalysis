@@ -17,9 +17,9 @@ on:
         description: Stage
         options:
           - stable
-          - alpha
-          - beta
           - rc
+          - beta
+          - alpha
 
 jobs:
   release-it:
@@ -67,11 +67,11 @@ jobs:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
     
       - name: Get next release number
-        run: |
-          echo "RELEASE_VERSION=$(npx release-it --release-version --dry-run)" >> $GITHUB_ENV
-
+        id: release
+        run: echo "::set-output name=version::$(npx release-it --release-version --dry-run)"
+  
       - name: Print release version
-        run: echo "The next release number is ${{ env.RELEASE_VERSION }}"
+        run: echo "The next release number is ${{ steps.release.outputs.version }}"
     
       - name: Replace version number in nuspec files
         run: 'sed -i -e "s/{{NuGetVersion}}/$GITVERSION_NUGETVERSION/g" *.nuspec'
