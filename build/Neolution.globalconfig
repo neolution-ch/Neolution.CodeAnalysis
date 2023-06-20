@@ -2,10 +2,6 @@
 # NOTE: Do not create section headers for configuration entries
 is_global = true
 
-#####################################
-########## Discussed rules ##########
-#####################################
-
 # Literals should not be passed as localized parameters
 ; Localization is not needed in every project and for every message. This rule disallows string literals everywhere e.g. for log messages, content that does not need to be translated etc.
 dotnet_diagnostic.S4055.severity = none
@@ -59,6 +55,7 @@ dotnet_diagnostic.S3994.severity = silent
 # Pass System.Uri objects instead of strings
 ; Dropped in favor of S4005
 dotnet_diagnostic.CA2234.severity = none
+dotnet_diagnostic.S4005.severity = warning
 
 # Redundant parentheses should not be used
 ; The team decided to drop this rule because most of the team members are used to write redundant parentheses.
@@ -73,6 +70,7 @@ dotnet_diagnostic.S4004.severity = silent
 ; Conflicts with rule S3358.
 dotnet_diagnostic.IDE0045.severity = none
 dotnet_diagnostic.IDE0046.severity = none
+dotnet_diagnostic.S3358.severity = warning
 
 # Avoid excessive class coupling
 ; Even if this rule might sound useful, in practice it was generating too many false-positives. Also, EF LINQ Queries are very prone to this and unit and integration tests have to setup and configure numerous dependencies in the same class.
@@ -85,6 +83,7 @@ dotnet_diagnostic.S4018.severity = none
 # Mark members as static
 ; Dropped in favor of S2325.
 dotnet_diagnostic.CA1822.severity = none
+dotnet_diagnostic.S2325.severity = warning
 
 # PropertyDocumentationMustHaveValue
 ; The documentation of the property value is doomed to become a hollow echo of the name and the summary.
@@ -106,6 +105,7 @@ dotnet_diagnostic.S1135.severity = suggestion
 # Missing XML comment for publicly visible type or member 'Type_or_Member'
 ; Dropped in favor of SA1600.
 dotnet_diagnostic.CS1591.severity = none
+dotnet_diagnostic.SA1600.severity = warning
 
 # C# Expression value is never used
 ; Is reporting way too many false negatives.
@@ -115,6 +115,7 @@ dotnet_diagnostic.IDE0058.severity = none
 ; Deactivated in favor of the more elaborate rule S3776 (Cognitive Complexity of methods should not be too high).
 dotnet_diagnostic.S1541.severity = none
 dotnet_diagnostic.CA1502.severity = none
+dotnet_diagnostic.S3776.severity = warning
 
 # Documentation text should end with a period
 ; Does not add too much quality and developers find it too annoying to comply with this.
@@ -136,6 +137,7 @@ dotnet_diagnostic.S4058.severity = silent
 # Do not raise reserved exception types
 ; Dropped in favor of S112
 dotnet_diagnostic.CA2201.severity = none
+dotnet_diagnostic.S112.severity = warning
 
 # Name can be simplified
 ; Can lead to conflicting scenarios in the using directives with SA1135.
@@ -152,27 +154,33 @@ dotnet_diagnostic.S109.severity = suggestion
 # Console logging should not be used
 ; This rule has been superseded by S106 (https://jira.sonarsource.com/browse/RSPEC-2228).
 dotnet_diagnostic.S2228.severity = none
+dotnet_diagnostic.S106.severity = warning
 
 # Single line comments should begin with single space
 ; Dropped in favor of S125.
 dotnet_diagnostic.SA1005.severity = none
+dotnet_diagnostic.S125.severity = warning
 
 # Unnecessary using directive
 ; Dropped in favor of S1128.
 dotnet_diagnostic.CS8019.severity = none
 dotnet_diagnostic.IDE0005.severity = none
+dotnet_diagnostic.S1128.severity = warning
 
 # Validate arguments of public methods
 ; Dropped in favor of S3900.
 dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.S3900.severity = warning
 
 # Specify IFormatProvider
 ; Dropped in favor of S4056.
 dotnet_diagnostic.CA1305.severity = none
+dotnet_diagnostic.S4056.severity = warning
 
 # Unread "private" fields should be removed
 ; Dropped in favor of S4487
 dotnet_diagnostic.IDE0052.severity = none
+dotnet_diagnostic.S4487.severity = warning
 
 # "switch" statements should have at least 3 "case" clauses
 ; Removed based on team vote. They prefer switch even if it has only one `case` clause.
@@ -189,10 +197,12 @@ dotnet_diagnostic.S1075.severity = suggestion
 # Rethrow to preserve stack details
 ; Dropped in favor of S3445.
 dotnet_diagnostic.CA2200.severity = none
+dotnet_diagnostic.S3445.severity = warning
 
 # Do not expose generic lists
 ; Dropped in favor of S3956.
 dotnet_diagnostic.CA1002.severity = none
+dotnet_diagnostic.S3956.severity = warning
 
 # Use the LoggerMessage delegates
 ; Not all logging needs to be high performance.
@@ -206,9 +216,14 @@ dotnet_diagnostic.IDE0055.severity = none
 ; Has a confirmed FP that makes it unusable when using nameof(): https://github.com/SonarSource/sonar-dotnet/issues/6126
 dotnet_diagnostic.S2857.severity = none
 
-######################################
-########## Additional rules ##########
-######################################
+# Calling ConfigureAwait on the awaited task
+; Drop S3216 in favor of CA2007
+dotnet_diagnostic.S3216.severity = none
+dotnet_diagnostic.CA2007.severity = warning
+
+# SA1305: Field names should not use Hungarian notation
+; Exceptions can be configured in stylecop.json
+dotnet_diagnostic.SA1412.severity = warning
 
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
@@ -243,25 +258,6 @@ dotnet_diagnostic.S4017.severity = warning
 # S4049: Properties should be preferred
 dotnet_diagnostic.S4049.severity = warning
 
-# CA5386: Avoid hardcoding SecurityProtocolType value
-dotnet_diagnostic.CA5386.severity = error
-
-# CA5394: Do not use insecure randomness
-dotnet_diagnostic.CA5394.severity = error
-
-# SA1200: Using directives should be placed correctly
-dotnet_diagnostic.SA1200.severity = warning
-
-# CA5351: Do Not Use Broken Cryptographic Algorithms
-dotnet_diagnostic.CA5351.severity = error
-
-# SA1412: Store files as UTF-8 with byte order mark
-dotnet_diagnostic.SA1412.severity = error
-
-# SA1305: Field names should not use Hungarian notation
-; Exceptions can be configured in stylecop.json
-dotnet_diagnostic.SA1412.severity = warning
-
 # S100: Methods and properties should be named in PascalCase
 dotnet_diagnostic.S100.severity = warning
 
@@ -271,17 +267,11 @@ dotnet_diagnostic.S104.severity = warning
 # S105: Tabulation characters should not be used
 dotnet_diagnostic.S105.severity = warning
 
-# S106: Standard outputs should not be used directly to log anything
-dotnet_diagnostic.S106.severity = warning
-
 # S110: Inheritance tree of classes should not be too deep
 dotnet_diagnostic.S110.severity = warning
 
 # S1109: A close curly brace should be located at the beginning of a line
 dotnet_diagnostic.S1109.severity = warning
-
-# S1128: Unused "using" should be removed
-dotnet_diagnostic.S1128.severity = warning
 
 # S113: Files should contain an empty newline at the end
 dotnet_diagnostic.S113.severity = warning
@@ -355,9 +345,6 @@ dotnet_diagnostic.S2197.severity = error
 # S2302: "nameof" should be used
 dotnet_diagnostic.S2302.severity = warning
 
-# S2325: Methods and properties that don't access instance data should be static
-dotnet_diagnostic.S2325.severity = warning
-
 # S2327: "try" statements with identical "catch" and/or "finally" blocks should be merged
 dotnet_diagnostic.S2327.severity = warning
 
@@ -394,9 +381,6 @@ dotnet_diagnostic.S2701.severity = warning
 # S2760: Sequential tests should not check the same condition
 dotnet_diagnostic.S2760.severity = warning
 
-# S2857: SQL keywords should be delimited by whitespace
-dotnet_diagnostic.S2857.severity = error
-
 # S2931: Classes with "IDisposable" members should implement "IDisposable"
 dotnet_diagnostic.S2931.severity = warning
 
@@ -411,9 +395,6 @@ dotnet_diagnostic.S3052.severity = warning
 
 # S3215: "interface" instances should not be cast to concrete types
 dotnet_diagnostic.S3215.severity = warning
-
-# S3216: "ConfigureAwait(false)" should be used
-dotnet_diagnostic.S3216.severity = warning
 
 # S3234: "GC.SuppressFinalize" should not be invoked for types without destructors
 dotnet_diagnostic.S3234.severity = error
@@ -448,9 +429,6 @@ dotnet_diagnostic.S3532.severity = warning
 # S3717: Track use of "NotImplementedException"
 dotnet_diagnostic.S3717.severity = warning
 
-# S3776: Cognitive Complexity of methods should not be too high
-dotnet_diagnostic.S3776.severity = warning
-
 # S3872: Parameter names should not duplicate the names of their methods
 dotnet_diagnostic.S3872.severity = warning
 
@@ -462,9 +440,6 @@ dotnet_diagnostic.S3880.severity = error
 
 # S3898: Value types should implement "IEquatable<T>"
 dotnet_diagnostic.S3898.severity = warning
-
-# S3900: Arguments of public methods should be validated against null
-dotnet_diagnostic.S3900.severity = warning
 
 # S3902: "Assembly.GetExecutingAssembly" should not be called
 dotnet_diagnostic.S3902.severity = warning
@@ -480,9 +455,6 @@ dotnet_diagnostic.S3909.severity = warning
 
 # S3949: Calculations should not overflow
 dotnet_diagnostic.S3949.severity = warning
-
-# S3956: "Generic.List" instances should not be part of public APIs
-dotnet_diagnostic.S3956.severity = warning
 
 # S3962: "static readonly" constants should be "const" instead
 dotnet_diagnostic.S3962.severity = warning
@@ -504,9 +476,6 @@ dotnet_diagnostic.S4000.severity = error
 
 # S4002: Disposable types should declare finalizers
 dotnet_diagnostic.S4002.severity = error
-
-# S4005: "System.Uri" arguments should be used instead of strings
-dotnet_diagnostic.S4005.severity = warning
 
 # S4016: Enumeration members should not be named "Reserved"
 dotnet_diagnostic.S4016.severity = error
@@ -541,9 +510,6 @@ dotnet_diagnostic.S4050.severity = warning
 # S4052: Types should not extend outdated base types
 dotnet_diagnostic.S4052.severity = error
 
-# S4056: Overloads with a "CultureInfo" or an "IFormatProvider" parameter should be used
-dotnet_diagnostic.S4056.severity = warning
-
 # S4057: Locales should be set for data types
 dotnet_diagnostic.S4057.severity = warning
 
@@ -577,8 +543,20 @@ dotnet_diagnostic.S4462.severity = warning
 # S4564: ASP.NET HTTP request validation feature should not be disabled
 dotnet_diagnostic.S4564.severity = error
 
-# S4487: Unread "private" fields should be removed
-dotnet_diagnostic.S4487.severity = warning
+# CA5386: Avoid hardcoding SecurityProtocolType value
+dotnet_diagnostic.CA5386.severity = error
+
+# CA5394: Do not use insecure randomness
+dotnet_diagnostic.CA5394.severity = error
+
+# SA1200: Using directives should be placed correctly
+dotnet_diagnostic.SA1200.severity = warning
+
+# CA5351: Do Not Use Broken Cryptographic Algorithms
+dotnet_diagnostic.CA5351.severity = error
+
+# SA1412: Store files as UTF-8 with byte order mark
+dotnet_diagnostic.SA1412.severity = error
 
 # CA1016: Mark assemblies with assembly version
 dotnet_diagnostic.CA1016.severity = warning
