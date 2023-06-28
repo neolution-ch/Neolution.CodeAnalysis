@@ -64,7 +64,8 @@ dotnet_diagnostic.IDE0003.severity = none
 
 # Use explicit type
 ; Do not force explicit type usage. Prefer using the implicit type (var) but you can use the explicit type to improve reading flow and comprehension.
-dotnet_diagnostic.IDE0008.severity = silent
+dotnet_diagnostic.IDE0007.severity = suggestion
+dotnet_diagnostic.IDE0008.severity = none
 
 # Track uses of in-source issue suppressions
 ; Suppressions should be allowed, but still tracked.
