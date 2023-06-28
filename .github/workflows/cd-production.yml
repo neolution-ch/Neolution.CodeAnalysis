@@ -20,7 +20,7 @@ jobs:
         run: echo NUGET_VERSION=${GITHUB_REF#refs/tags/v} >> $GITHUB_ENV
       
       - name: Replace version number in nuspec files
-        run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec **/*.targets'
+        run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec'
 
       - name: Setup NuGet.exe for use with actions
         uses: NuGet/setup-nuget@v1.2.0
@@ -32,6 +32,6 @@ jobs:
         run: nuget pack Neolution.CodeAnalysis.TestsRuleset.nuspec
           
       - name: Push all packages to Nuget.org
-        run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN  **/*.nupkg
+        run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN **/*.nupkg
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}

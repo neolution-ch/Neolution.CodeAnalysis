@@ -7,7 +7,7 @@ on:
         type: choice
         description: Semantic Version Type
         options:
-          - no-version-update
+          - automatic
           - patch
           - minor
           - major
@@ -50,7 +50,7 @@ jobs:
         run: |
           params=()
 
-          if [[ ${{ github.event.inputs.version_type }} != "no-version-update" ]]; then
+          if [[ ${{ github.event.inputs.version_type }} != "automatic" ]]; then
               params+=(${{ github.event.inputs.version_type }})
           fi
 
@@ -62,6 +62,7 @@ jobs:
 
           params+=(--ci)
 
-          release-it -y "${params[@]}"
+          echo "command: release-it ${params[@]}"
+          release-it "${params[@]}"
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
