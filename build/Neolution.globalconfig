@@ -1,4 +1,4 @@
-﻿# Top level entry required to mark this as a global AnalyzerConfig file
+# Top level entry required to mark this as a global AnalyzerConfig file
 # NOTE: Do not create section headers for configuration entries
 is_global = true
 
@@ -226,6 +226,18 @@ dotnet_diagnostic.CA2007.severity = warning
 ; Exceptions can be configured in stylecop.json
 dotnet_diagnostic.SA1412.severity = warning
 
+# S3242: Method parameters should be declared with base types
+; False positive with IEnumerable<T> that could lead to multiple enumerations. This should be only applied on Developers discretion.
+dotnet_diagnostic.S3242.severity = suggestion
+
+# S3257: Declarations and initializations should be as concise as possible
+; In some cases developers may prefer the verbosity of a unused parameter over the easier readability of a discard.
+dotnet_diagnostic.S3257.severity = suggestion
+
+# S3267: Loops should be simplified with "LINQ" expressions
+; This can be an annoying rule in cases where it does not really improve readability or even worsens it.
+dotnet_diagnostic.S3267.severity = suggestion
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 
@@ -403,17 +415,11 @@ dotnet_diagnostic.S3234.severity = error
 # S3240: The simplest possible condition syntax should be used
 dotnet_diagnostic.S3240.severity = warning
 
-# S3242: Method parameters should be declared with base types
-dotnet_diagnostic.S3242.severity = warning
-
 # S3253: Constructor and destructor declarations should not be redundant
 dotnet_diagnostic.S3253.severity = warning
 
 # S3254: Default parameter values should not be passed as arguments
 dotnet_diagnostic.S3254.severity = warning
-
-# S3257: Declarations and initializations should be as concise as possible
-dotnet_diagnostic.S3257.severity = warning
 
 # S3353: Unchanged local variables should be "const"
 dotnet_diagnostic.S3353.severity = warning
