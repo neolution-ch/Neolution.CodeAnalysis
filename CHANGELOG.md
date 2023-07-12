@@ -15,6 +15,7 @@ and adheres to a project-specific [Versioning](/README.md).
 
 - Changed "S3267: Loops should be simplified with "LINQ" expressions" to `suggestion`
 - Changed "S3257: Declarations and initializations should be as concise as possible" to `suggestion`
+- Changed "S3242: Method parameters should be declared with base types" to `suggestion`
 
 ## [3.0.0] - 2023-06-28
 
