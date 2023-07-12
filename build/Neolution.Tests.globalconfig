@@ -270,13 +270,13 @@ dotnet_diagnostic.SA1412.severity = warning
 ; False positive with IEnumerable<T> that could lead to multiple enumerations. This should be only applied on Developers discretion.
 dotnet_diagnostic.S3242.severity = suggestion
 
-# S3267: Loops should be simplified with "LINQ" expressions
-; This can be an annoying rule in cases where it does not really improve readability or even worsens it.
-dotnet_diagnostic.S3267.severity = suggestion
-
 # S3257: Declarations and initializations should be as concise as possible
 ; In some cases developers may prefer the verbosity of a unused parameter over the easier readability of a discard.
 dotnet_diagnostic.S3257.severity = suggestion
+
+# S3267: Loops should be simplified with "LINQ" expressions
+; This can be an annoying rule in cases where it does not really improve readability or even worsens it.
+dotnet_diagnostic.S3267.severity = suggestion
 
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
