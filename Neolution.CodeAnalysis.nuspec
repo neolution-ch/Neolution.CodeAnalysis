@@ -18,7 +18,7 @@
   </metadata>
   <files>
     <file src="build\Neolution.CodeAnalysis.props" target="build\Neolution.CodeAnalysis.props" />
-    <file src="build\Neolution.globalconfig" target="build\Neolution.globalconfig" />
+    <file src="build\Neolution.CodeAnalysis.globalconfig" target="build\Neolution.CodeAnalysis.globalconfig" />
     <file src="build\stylecop.json" target="build\stylecop.json" />
     <file src="README.md" target="docs\" />
   </files>

@@ -2,6 +2,9 @@
 # NOTE: Do not create section headers for configuration entries
 is_global = true
 
+# For conflicting rules, the higher level has higher priority 
+global_level = 100
+
 # Literals should not be passed as localized parameters
 ; Localization is not needed in every project and for every message. This rule disallows string literals everywhere e.g. for log messages, content that does not need to be translated etc.
 dotnet_diagnostic.S4055.severity = none
@@ -226,6 +229,11 @@ dotnet_diagnostic.CA2007.severity = warning
 ; Exceptions can be configured in stylecop.json
 dotnet_diagnostic.SA1412.severity = warning
 
+# S113: Files should contain an empty newline at the end
+; Some tools (e.g. Git Diff) work better when files end with an empty line.
+dotnet_diagnostic.S113.severity = warning
+dotnet_diagnostic.SA1518.severity = none
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 
@@ -273,9 +281,6 @@ dotnet_diagnostic.S110.severity = warning
 
 # S1109: A close curly brace should be located at the beginning of a line
 dotnet_diagnostic.S1109.severity = warning
-
-# S113: Files should contain an empty newline at the end
-dotnet_diagnostic.S113.severity = warning
 
 # S1144: Unused private types or members should be removed
 dotnet_diagnostic.S1144.severity = warning
