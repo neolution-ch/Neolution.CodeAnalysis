@@ -229,6 +229,11 @@ dotnet_diagnostic.CA2007.severity = warning
 ; Exceptions can be configured in stylecop.json
 dotnet_diagnostic.SA1412.severity = warning
 
+# S113: Files should contain an empty newline at the end
+; Some tools (e.g. Git Diff) work better when files end with an empty line.
+dotnet_diagnostic.S113.severity = warning
+dotnet_diagnostic.SA1518.severity = none
+
 # S3242: Method parameters should be declared with base types
 ; False positive with IEnumerable<T> that could lead to multiple enumerations. This should be only applied on Developers discretion.
 dotnet_diagnostic.S3242.severity = suggestion
@@ -288,9 +293,6 @@ dotnet_diagnostic.S110.severity = warning
 
 # S1109: A close curly brace should be located at the beginning of a line
 dotnet_diagnostic.S1109.severity = warning
-
-# S113: Files should contain an empty newline at the end
-dotnet_diagnostic.S113.severity = warning
 
 # S1144: Unused private types or members should be removed
 dotnet_diagnostic.S1144.severity = warning
