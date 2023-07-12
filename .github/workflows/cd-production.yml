@@ -9,8 +9,7 @@ env:
   ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
   
 jobs:
-  publish:
-    name: build, pack & publish
+  pack-and-publish:
     runs-on: ubuntu-latest
     steps:    
       - name: Checkout
@@ -35,3 +34,12 @@ jobs:
         run: dotnet nuget push --skip-duplicate -s $ARTIFACTS_FEED_URL -k $NUGET_AUTH_TOKEN **/*.nupkg
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
+        
+  notify:
+    needs: [pack-and-publish]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: neolution-ch/action-release-notifier@v1
+        with:
+          slack-token: ${{ secrets.SLACK_RELEASE_NOTIFIER_TOKEN }}
+          slack-channel-ids: "CD34NHYN6"
