@@ -9,8 +9,7 @@ env:
   ARTIFACTS_FEED_URL: https://api.nuget.org/v3/index.json
   
 jobs:
-  publish:
-    name: build, pack & publish
+  pack-and-publish:
     runs-on: ubuntu-latest
     steps:    
       - name: Checkout
@@ -37,7 +36,7 @@ jobs:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_API_KEY_NEOLUTION }}
         
   notify:
-    needs: [publish]
+    needs: [pack-and-publish]
     runs-on: ubuntu-latest
     steps:
       - uses: neolution-ch/action-release-notifier@v1
