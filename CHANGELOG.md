@@ -7,6 +7,8 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+## [3.0.1] - 2023-07-12
+
 ### Added
 
 - Notification for Slack channel upon new releases
@@ -36,6 +38,7 @@ and adheres to a project-specific [Versioning](/README.md).
 
 - Changelog
 
-[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.0...HEAD
+[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.1...HEAD
+[3.0.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.1...v3.0.0
 [2.7.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.0...v2.7.1
