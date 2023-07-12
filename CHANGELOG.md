@@ -7,11 +7,20 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Added
+
+- Notification for Slack channel upon new releases
+
+### Changed
+
+- Changed "S3267: Loops should be simplified with "LINQ" expressions" to `suggestion`
+- Changed "S3257: Declarations and initializations should be as concise as possible" to `suggestion`
+
 ## [3.0.0] - 2023-06-28
 
 ### Changed
 
-- Stopped changing all rules to error first and instead use the default rulesets of the Analyzers as the base ru
+- Stopped changing all rules to error first and instead use the default rulesets of the Analyzers as the base rules
 - Migrate from \*.ruleset files to \*.globalconfig files
 - Migrate from \*.targets to \*. props files
 - Simplified and decluttered README file

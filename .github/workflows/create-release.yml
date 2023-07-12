@@ -61,7 +61,7 @@ jobs:
           fi
 
           params+=(--ci)
-
+          
           echo "command: release-it ${params[@]}"
           release-it "${params[@]}"
         env:
