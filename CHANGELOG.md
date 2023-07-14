@@ -7,6 +7,16 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed TestsRuleset so the tests-specific rules override the regular rules and not the other way around
+
+### Removed
+
+- CA2253: Named placeholders should not be numeric values
+- CA2254: Template should be a static expression
+- SA1518: Use line endings correctly at end of file (removed in favor of S113)
+
 ## [3.0.1] - 2023-07-12
 
 ### Added
