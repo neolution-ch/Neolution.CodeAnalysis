@@ -2,42 +2,6 @@
 # NOTE: Do not create section headers for configuration entries
 is_global = true
 
-#############################################
-########## Rules specific to tests ##########
-#############################################
-
-# CA1707: Identifiers should not contain underscores
-; We use underscores in test method names to make them easier to read.
-dotnet_diagnostic.CA1707.severity = none
-
-# CA1031: Do not catch general exception types
-; Since we can raise any Exception we like In Tests we should also be able to catch any Exception we like.
-dotnet_diagnostic.CA1031.severity = none
-
-# CA2000: Dispose objects before losing scope
-; Tests are never run continuously in a production environment. Resources are freed as soon as the Test run ends, so there is no need to worry about the pitfalls of not freeing resources.
-dotnet_diagnostic.CA2000.severity = none
-
-# CA2007: Consider calling ConfigureAwait on the awaited task
-; This warning is intended for libraries, where the code may be executed in arbitrary environments and where code shouldn't make assumptions about the environment or how the caller of the method may be invoking or waiting on it
-dotnet_diagnostic.CA2007.severity = none
-
-# S112: General exceptions should never be thrown
-; In Tests we should be able to raise any Exception we like.
-dotnet_diagnostic.S112.severity = none
-
-# S131: "switch/Select" statements should contain a "default/Case Else" clauses
-; There is no need for defensive programming in Tests
-dotnet_diagnostic.S131.severity = none
-
-# S126: "if ... else if" constructs should end with "else" clauses
-; There is no need for defensive programming in Tests
-dotnet_diagnostic.S126.severity = none
-
-# S4581: "new Guid()" should not be used
-; When creating mocks/substitutes this can be irrelevant, so it should not break the build
-dotnet_diagnostic.S4581.severity = suggestion
-
 ###################################
 ########## Regular rules ##########
 ###################################
@@ -266,6 +230,11 @@ dotnet_diagnostic.CA2007.severity = warning
 ; Exceptions can be configured in stylecop.json
 dotnet_diagnostic.SA1412.severity = warning
 
+# S113: Files should contain an empty newline at the end
+; Some tools (e.g. Git Diff) work better when files end with an empty line.
+dotnet_diagnostic.S113.severity = warning
+dotnet_diagnostic.SA1518.severity = none
+
 # S3242: Method parameters should be declared with base types
 ; False positive with IEnumerable<T> that could lead to multiple enumerations. This should be only applied on Developers discretion.
 dotnet_diagnostic.S3242.severity = suggestion
@@ -325,9 +294,6 @@ dotnet_diagnostic.S110.severity = warning
 
 # S1109: A close curly brace should be located at the beginning of a line
 dotnet_diagnostic.S1109.severity = warning
-
-# S113: Files should contain an empty newline at the end
-dotnet_diagnostic.S113.severity = warning
 
 # S1144: Unused private types or members should be removed
 dotnet_diagnostic.S1144.severity = warning
@@ -779,8 +745,38 @@ dotnet_diagnostic.CA2250.severity = warning
 # CA2252: This API requires opting into preview features
 dotnet_diagnostic.CA2252.severity = warning
 
-# CA2253: Named placeholders should not be numeric values
-dotnet_diagnostic.CA2253.severity = warning
+#############################################
+########## Rules specific to tests ##########
+#############################################
 
-# CA2254: Template should be a static expression
-dotnet_diagnostic.CA2254.severity = warning
+# CA1707: Identifiers should not contain underscores
+; We use underscores in test method names to make them easier to read.
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1031: Do not catch general exception types
+; Since we can raise any Exception we like In Tests we should also be able to catch any Exception we like.
+dotnet_diagnostic.CA1031.severity = none
+
+# CA2000: Dispose objects before losing scope
+; Tests are never run continuously in a production environment. Resources are freed as soon as the Test run ends, so there is no need to worry about the pitfalls of not freeing resources.
+dotnet_diagnostic.CA2000.severity = none
+
+# CA2007: Consider calling ConfigureAwait on the awaited task
+; This warning is intended for libraries, where the code may be executed in arbitrary environments and where code shouldn't make assumptions about the environment or how the caller of the method may be invoking or waiting on it
+dotnet_diagnostic.CA2007.severity = none
+
+# S112: General exceptions should never be thrown
+; In Tests we should be able to raise any Exception we like.
+dotnet_diagnostic.S112.severity = none
+
+# S131: "switch/Select" statements should contain a "default/Case Else" clauses
+; There is no need for defensive programming in Tests
+dotnet_diagnostic.S131.severity = none
+
+# S126: "if ... else if" constructs should end with "else" clauses
+; There is no need for defensive programming in Tests
+dotnet_diagnostic.S126.severity = none
+
+# S4581: "new Guid()" should not be used
+; When creating mocks/substitutes this can be irrelevant, so it should not break the build
+dotnet_diagnostic.S4581.severity = suggestion
