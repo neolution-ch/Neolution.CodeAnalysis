@@ -7,6 +7,10 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- In some cases the XML documentation file had a bad file name when the `$(AssemblyName)` variable was not set during the build process
+
 ## [3.0.2] - 2023-07-17
 
 ### Fixed
