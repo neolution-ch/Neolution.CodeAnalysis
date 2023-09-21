@@ -7,6 +7,14 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- If build configuration is not passed explicitly, it should be like passing `Debug`
+
+### Changed
+
+- The XML documentation can be generated in all build configurations, there is no need to restrict it.
+
 ## [3.0.3] - 2023-07-20
 
 ### Fixed
