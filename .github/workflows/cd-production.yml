@@ -42,4 +42,4 @@ jobs:
       - uses: neolution-ch/action-release-notifier@v1
         with:
           slack-token: ${{ secrets.SLACK_RELEASE_NOTIFIER_TOKEN }}
-          slack-channel-ids: "CD34NHYN6"
+          slack-channel-ids: "C05DR8P010A"
