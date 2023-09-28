@@ -7,6 +7,9 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+- Misplaced `Configuration` element in `*.props` file in previous release, causing all projects to fail build
+
 ## [3.0.4] - 2023-09-27
 
 ### Fixed
