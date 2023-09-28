@@ -7,7 +7,10 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+## [3.0.5] - 2023-09-28
+
 ### Fixed
+
 - Misplaced `Configuration` element in `*.props` file in previous release, causing all projects to fail build
 
 ## [3.0.4] - 2023-09-27
@@ -69,7 +72,8 @@ and adheres to a project-specific [Versioning](/README.md).
 
 - Changelog
 
-[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.4...HEAD
+[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.5...HEAD
+[3.0.5]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.4...v3.0.5
 [3.0.4]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.3...v3.0.4
 [3.0.3]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.2...v3.0.3
 [3.0.2]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.1...v3.0.2
