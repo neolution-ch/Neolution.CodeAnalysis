@@ -24,3 +24,10 @@ Given a version number `MAJOR.MINOR.PATCH`, an incremented number for:
 - You can (and should) always update the package to the latest `PATCH` version whenever you have the chance to do it, it should never break the build. 
 - Updating to the latest `MINOR` version can break the build and may require minor refactorings. But you can expect to have Roslyn code fixes and/or documentation available for the changes that are needed to fix the build.
 -  `MAJOR` updates will break your build and may require major refactorings.
+
+
+## How to create a new release
+- Create a new branch for example feature/remove-some-rule
+- Update the CHANGELOG.md file with your changes according to keepachangelog.com
+- Go to github and create a new release. There you can define the new version number and release stage
+- The github action will create a new nuget package and push it to nuget.org
