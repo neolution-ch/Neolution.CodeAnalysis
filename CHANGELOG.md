@@ -7,6 +7,10 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Changed
+
+- Updated SonarAnalyzer to version 9 because of new .Net8 language features that otherwise cause false positives
+
 ## [3.0.5] - 2023-09-28
 
 ### Fixed

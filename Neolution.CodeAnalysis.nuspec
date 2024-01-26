@@ -13,7 +13,7 @@
     <developmentDependency>true</developmentDependency>
     <dependencies>
       <dependency id="StyleCop.Analyzers" version="1.2.0-beta.435" />
-      <dependency id="SonarAnalyzer.CSharp" version="8.52.0.60960" />
+      <dependency id="SonarAnalyzer.CSharp" version="9.17.0.82934" />
     </dependencies>
   </metadata>
   <files>
