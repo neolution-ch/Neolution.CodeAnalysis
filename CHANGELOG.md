@@ -14,7 +14,7 @@ and adheres to a project-specific [Versioning](/README.md).
 ### Changed
 
 - Updated `SonarAnalyzer.CSharp` to latest minor version (8.56.0.67649)
-- Updated `StyleCop.Analyzers` to latest available version (1.2.0-beta.507)
+- Changed from `StyleCop.Analyzers` package to `StyleCop.Analyzers.Unstable` and update to latest available version (1.2.0.556)
 - Changed `.globalconfig` file names to match NuGet package names as recommended by Microsoft
 - Currently active `.globalconfig` is now linked in the solution explorer and therefore quickly accessible from within the IDE
 
