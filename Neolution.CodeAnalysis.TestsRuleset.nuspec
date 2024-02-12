@@ -12,13 +12,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <dependencies>
-      <dependency id="StyleCop.Analyzers" version="1.2.0-beta.435" />
-      <dependency id="SonarAnalyzer.CSharp" version="8.52.0.60960" />
+      <dependency id="StyleCop.Analyzers.Unstable" version="1.2.0.556" />
+      <dependency id="SonarAnalyzer.CSharp" version="8.56.0.67649" />
     </dependencies>
   </metadata>
   <files>
     <file src="build\Neolution.CodeAnalysis.TestsRuleset.props" target="build\Neolution.CodeAnalysis.TestsRuleset.props" />
-    <file src="build\Neolution.Tests.globalconfig" target="build\Neolution.Tests.globalconfig" />
+    <file src="build\Neolution.CodeAnalysis.globalconfig" target="build\Neolution.CodeAnalysis.globalconfig" />
+    <file src="build\Neolution.CodeAnalysis.TestsRuleset.globalconfig" target="build\Neolution.CodeAnalysis.TestsRuleset.globalconfig" />
     <file src="build\stylecop.json" target="build\stylecop.json" />
     <file src="README.md" target="docs\" />
   </files>

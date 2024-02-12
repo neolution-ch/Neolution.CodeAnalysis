@@ -3,15 +3,6 @@ name: Create Release
 on:
   workflow_dispatch:
     inputs:
-      version_type:
-        type: choice
-        description: Semantic Version Type
-        options:
-          - automatic
-          - patch
-          - minor
-          - major
-
       pre_release:
         type: choice
         description: Stage
@@ -20,6 +11,15 @@ on:
           - rc
           - beta
           - alpha
+          
+      version_type:
+        type: choice
+        description: Semantic Version Type
+        options:
+          - automatic
+          - patch
+          - minor
+          - major
 
 jobs:
   release-it:

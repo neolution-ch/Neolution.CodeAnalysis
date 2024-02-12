@@ -1,0 +1,42 @@
+﻿# Top level entry required to mark this as a global AnalyzerConfig file
+# NOTE: Do not create section headers for configuration entries
+is_global = true
+
+# For conflicting rules, the higher level has higher priority 
+global_level = 101
+
+#############################################
+########## Rules specific to tests ##########
+#############################################
+
+# CA1707: Identifiers should not contain underscores
+; We use underscores in test method names to make them easier to read.
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1031: Do not catch general exception types
+; Since we can raise any Exception we like In Tests we should also be able to catch any Exception we like.
+dotnet_diagnostic.CA1031.severity = none
+
+# CA2000: Dispose objects before losing scope
+; Tests are never run continuously in a production environment. Resources are freed as soon as the Test run ends, so there is no need to worry about the pitfalls of not freeing resources.
+dotnet_diagnostic.CA2000.severity = none
+
+# CA2007: Consider calling ConfigureAwait on the awaited task
+; This warning is intended for libraries, where the code may be executed in arbitrary environments and where code shouldn't make assumptions about the environment or how the caller of the method may be invoking or waiting on it
+dotnet_diagnostic.CA2007.severity = none
+
+# S112: General exceptions should never be thrown
+; In Tests we should be able to raise any Exception we like.
+dotnet_diagnostic.S112.severity = none
+
+# S131: "switch/Select" statements should contain a "default/Case Else" clauses
+; There is no need for defensive programming in Tests
+dotnet_diagnostic.S131.severity = none
+
+# S126: "if ... else if" constructs should end with "else" clauses
+; There is no need for defensive programming in Tests
+dotnet_diagnostic.S126.severity = none
+
+# S4581: "new Guid()" should not be used
+; When creating mocks/substitutes this can be irrelevant, so it should not break the build
+dotnet_diagnostic.S4581.severity = suggestion
