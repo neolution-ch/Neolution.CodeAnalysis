@@ -246,6 +246,10 @@ dotnet_diagnostic.S3257.severity = suggestion
 ; This can be an annoying rule in cases where it does not really improve readability or even worsens it.
 dotnet_diagnostic.S3267.severity = suggestion
 
+# CA2000: Dispose objects before losing scopes
+; Developers should be warned when they create disposable objects without disposing them
+dotnet_diagnostic.CA2000.severity = warning
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 

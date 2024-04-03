@@ -32,6 +32,7 @@ and adheres to a project-specific [Versioning](/README.md).
 - S4545: "DebuggerDisplayAttribute" strings should reference existing members
 - S4663: Comments should not be empty
 - S5856: Regular expressions should be syntactically valid
+- CA2000: Dispose objects before losing scopes
 
 ### Removed
 
