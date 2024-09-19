@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Neolution.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)Neolution.CodeAnalysis.globalconfig" Link=".globalconfig" />
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
   </ItemGroup>
   
