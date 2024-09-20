@@ -1,4 +1,3 @@
-# https://docs.microsoft.com/en-us/azure/devops/artifacts/quickstarts/github-actions?view=azure-devops
 name: Publish NuGet package
 
 on:
@@ -38,6 +37,7 @@ jobs:
   notify:
     needs: [pack-and-publish]
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.release.tag_name, '-alpha.') }}
     steps:
       - uses: neolution-ch/action-release-notifier@v1
         with:
