@@ -7,6 +7,10 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Changed
+
+- Updated `S1133` to `suggestion`, because while we do want deprecated code to be removed eventually, marking code as obsolete should not immediately break the build.
+
 ## [3.1.0] - 2024-09-19
 
 ### Fixed

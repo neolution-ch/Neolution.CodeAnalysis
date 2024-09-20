@@ -250,6 +250,10 @@ dotnet_diagnostic.S3267.severity = suggestion
 ; Developers should be warned when they create disposable objects without disposing them
 dotnet_diagnostic.CA2000.severity = warning
 
+# S1133	Do not forget to remove this deprecated code someday.
+; Deprecated code should eventually be removed, but it should not break the current build.
+dotnet_diagnostic.S1133.severity = suggestion
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 
