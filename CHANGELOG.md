@@ -9,42 +9,42 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ### Added
 
-- S2925 "Thread.Sleep" should not be used in tests
-- S3363 Date and time should not be used as a type for primary keys
-- S6561 Avoid using "DateTime.Now" for benchmarking or timing operations
-- S6562 Always set the "DateTimeKind" when creating new "DateTime" instances
-- S6575 Use "TimeZoneInfo.FindSystemTimeZoneById" without converting the timezones with "TimezoneConverter"
-- S6580 Use a format provider when parsing date and time
-- S6588 Use the "UnixEpoch" field instead of creating "DateTime" instances that point to the beginning of the Unix epoch
-- S6602 "Find" method should be used instead of the "FirstOrDefault" extension
-- S6603 The collection-specific "TrueForAll" method should be used instead of the "All" extension
-- S6605 Collection-specific "Exists" method should be used instead of the "Any" extension
-- S6607 The collection should be filtered before sorting by using "Where" before "OrderBy"
-- S6608 Prefer indexing instead of "Enumerable" methods on types implementing "IList"
-- S6609 "Min/Max" properties of "Set" types should be used instead of the "Enumerable" extension methods
-- S6610 "StartsWith" and "EndsWith" overloads that take a "char" should be used instead of the ones that take a "string"
-- S6612 The lambda parameter should be used instead of capturing arguments in "ConcurrentDictionary" methods
-- S6613 "First" and "Last" properties of "LinkedList" should be used instead of the "First()" and "Last()" extension methods
-- S6617 "Contains" should be used instead of "Any" for simple equality checks
-- S6618 "string.Create" should be used instead of "FormattableString"
-- S6640 Using unsafe code blocks is security-sensitive
-- S6797 Blazor query parameter type should be supported
-- S6798 [JSInvokable] attribute should only be used on public methods
-- S6800 Component parameter type should match the route parameter type constraint
-- S6803 Parameters with SupplyParameterFromQuery attribute should be used only in routable components
+- S2925: "Thread.Sleep" should not be used in tests
+- S3363: Date and time should not be used as a type for primary keys
+- S6561: Avoid using "DateTime.Now" for benchmarking or timing operations
+- S6562: Always set the "DateTimeKind" when creating new "DateTime" instances
+- S6575: Use "TimeZoneInfo.FindSystemTimeZoneById" without converting the timezones with "TimezoneConverter"
+- S6580: Use a format provider when parsing date and time
+- S6588: Use the "UnixEpoch" field instead of creating "DateTime" instances that point to the beginning of the Unix epoch
+- S6602: "Find" method should be used instead of the "FirstOrDefault" extension
+- S6603: The collection-specific "TrueForAll" method should be used instead of the "All" extension
+- S6605: Collection-specific "Exists" method should be used instead of the "Any" extension
+- S6607: The collection should be filtered before sorting by using "Where" before "OrderBy"
+- S6608: Prefer indexing instead of "Enumerable" methods on types implementing "IList"
+- S6609: "Min/Max" properties of "Set" types should be used instead of the "Enumerable" extension methods
+- S6610: "StartsWith" and "EndsWith" overloads that take a "char" should be used instead of the ones that take a "string"
+- S6612: The lambda parameter should be used instead of capturing arguments in "ConcurrentDictionary" methods
+- S6613: "First" and "Last" properties of "LinkedList" should be used instead of the "First()" and "Last()" extension methods
+- S6617: "Contains" should be used instead of "Any" for simple equality checks
+- S6618: "string.Create" should be used instead of "FormattableString"
+- S6640: Using unsafe code blocks is security-sensitive
+- S6797: Blazor query parameter type should be supported
+- S6798: [JSInvokable] attribute should only be used on public methods
+- S6800: Component parameter type should match the route parameter type constraint
+- S6803: Parameters with SupplyParameterFromQuery attribute should be used only in routable components
 
-### Removed rules
+### Removed
 
-- S2228 Console logging should not be used
-- S2255 Writing cookies is security-sensitive
-- S3884 "CoSetProxyBlanket" and "CoInitializeSecurity" should not be used
-- S4564 ASP.NET HTTP request validation feature should not be disabled
-- S4784 Using regular expressions is security-sensitive
-- S4787 Encrypting data is security-sensitive
-- S4818 Using Sockets is security-sensitive
-- S4823 Using command line arguments is security-sensitive
-- S4829 Reading the Standard Input is security-sensitive
-- S4834 Controlling permissions is security-sensitive
+- S2228: Console logging should not be used
+- S2255: Writing cookies is security-sensitive
+- S3884: "CoSetProxyBlanket" and "CoInitializeSecurity" should not be used
+- S4564: ASP.NET HTTP request validation feature should not be disabled
+- S4784: Using regular expressions is security-sensitive
+- S4787: Encrypting data is security-sensitive
+- S4818: Using Sockets is security-sensitive
+- S4823: Using command line arguments is security-sensitive
+- S4829: Reading the Standard Input is security-sensitive
+- S4834: Controlling permissions is security-sensitive
 
 ## [3.1.1] - 2024-09-20
 
