@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Determine version for NuGet package
-        run: echo NUGET_VERSION=0.$(date '+%Y.%m')-ci.$(date '+%d%H%M%S') >> $GITHUB_ENV
+        run: echo NUGET_VERSION=0.$(date '+%Y.%m')-ci$(date '+%d%H%M%S') >> $GITHUB_ENV
       
       - name: Replace version number in nuspec files
         run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec'
