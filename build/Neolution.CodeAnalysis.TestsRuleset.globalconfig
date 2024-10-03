@@ -42,5 +42,5 @@ dotnet_diagnostic.S126.severity = none
 dotnet_diagnostic.S4581.severity = suggestion
 
 # S4144: Methods should not have identical implementations
-; When using parameterised tests it can make sense to have different test methods with different parametrization but using same implementation.
+; When using parameterised tests it can make sense to have different test methods with different parametrization but using the same implementation.
 dotnet_diagnostic.S4144.severity = none
