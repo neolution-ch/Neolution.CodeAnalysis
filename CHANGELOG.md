@@ -9,7 +9,7 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ### Removed
 
-- (Tests ruleset) S4144: Methods should not have identical implementations, because when using parameterised tests it can make sense to have different test methods with different parametrization but using the same implementation.
+- (Tests ruleset only) S4144: Methods should not have identical implementations, because when using parameterised tests it can make sense to have different test methods with different parametrization but using the same implementation.
 
 ## [3.1.1] - 2024-09-20
 
