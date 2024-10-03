@@ -40,3 +40,7 @@ dotnet_diagnostic.S126.severity = none
 # S4581: "new Guid()" should not be used
 ; When creating mocks/substitutes this can be irrelevant, so it should not break the build
 dotnet_diagnostic.S4581.severity = suggestion
+
+# S4144: Methods should not have identical implementations
+; When using parameterised tests it can make sense to have different test methods with different parametrization but using same implementation.
+dotnet_diagnostic.S4144.severity = none
