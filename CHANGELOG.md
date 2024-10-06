@@ -42,6 +42,12 @@ and adheres to a project-specific [Versioning](/README.md).
 - S4829: Reading the Standard Input is security-sensitive
 - S4834: Controlling permissions is security-sensitive
 
+## [3.1.2] - 2024-10-03
+
+### Removed
+
+- (Tests ruleset only) S4144: Methods should not have identical implementations, because when using parameterised tests it can make sense to have different test methods with different parametrization but using the same implementation.
+
 ## [3.1.1] - 2024-09-20
 
 ### Changed
@@ -146,7 +152,7 @@ and adheres to a project-specific [Versioning](/README.md).
 
 - Changelog
 
-[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.1...HEAD
+[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.2...HEAD
 [3.1.0]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.5...v3.1.0
 [3.0.5]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.4...v3.0.5
 [3.0.4]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.3...v3.0.4
@@ -155,4 +161,5 @@ and adheres to a project-specific [Versioning](/README.md).
 [3.0.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.1...v3.0.0
 [2.7.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.0...v2.7.1
+[3.1.2]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.1-alpha.0...v3.1.1
