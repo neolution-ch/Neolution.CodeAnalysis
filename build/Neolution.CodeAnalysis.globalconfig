@@ -254,6 +254,22 @@ dotnet_diagnostic.CA2000.severity = warning
 ; Deprecated code should eventually be removed, but it should not break the current build.
 dotnet_diagnostic.S1133.severity = suggestion
 
+# S6602: "Find" method should be used instead of the "FirstOrDefault" extension
+; It seems like the potential performance gains here will be negative after .NET9: https://github.com/SonarSource/sonar-dotnet/issues/9664
+dotnet_diagnostic.S6602.severity = none
+
+# S6603: The collection-specific "TrueForAll" method should be used instead of the "All" extension
+; Only has a performance gain with "large" collections and has a slightly different syntax when used with Arrays which could lead to confusion.
+dotnet_diagnostic.S6603.severity = none
+
+# S6605: Collection-specific "Exists" method should be used instead of the "Any" extension
+; It seems like the potential performance gains here will be negative after .NET9: https://github.com/SonarSource/sonar-dotnet/issues/9665
+dotnet_diagnostic.S6605.severity = none
+
+# S6608: Prefer indexing instead of "Enumerable" methods on types implementing "IList"
+; Better readability of `First()` and `Last()` are preferred over performance gains
+dotnet_diagnostic.S6608.severity = none
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 
