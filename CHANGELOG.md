@@ -7,6 +7,8 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+## [3.2.0] - 2024-10-11
+
 ### Changed
 
 - Updated SonarAnalyzer.CSharp to version 9.20.0.85982
@@ -156,7 +158,7 @@ and adheres to a project-specific [Versioning](/README.md).
 
 - Changelog
 
-[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.2...HEAD
+[unreleased]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.2.0...HEAD
 [3.1.0]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.5...v3.1.0
 [3.0.5]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.4...v3.0.5
 [3.0.4]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.3...v3.0.4
@@ -165,5 +167,6 @@ and adheres to a project-specific [Versioning](/README.md).
 [3.0.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.1...v3.0.0
 [2.7.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v2.7.0...v2.7.1
+[3.2.0]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.2...v3.2.0
 [3.1.2]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/neolution-ch/Neolution.CodeAnalysis/compare/v3.1.1-alpha.0...v3.1.1
