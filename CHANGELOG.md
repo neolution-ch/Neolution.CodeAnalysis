@@ -7,6 +7,10 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Changed
+
+- Updated SonarAnalyzer.CSharp to version 9.20.0.85982
+
 ### Added
 
 - S2925: "Thread.Sleep" should not be used in tests
