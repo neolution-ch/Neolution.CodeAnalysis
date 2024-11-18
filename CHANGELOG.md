@@ -7,6 +7,10 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- Do not treat NU1901, NU1902, NU1903 and NU1904 warnings as errors in "Release" configuration
+
 ## [3.2.0] - 2024-10-11
 
 ### Changed
