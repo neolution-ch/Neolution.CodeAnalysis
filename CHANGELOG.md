@@ -30,7 +30,6 @@ and adheres to a project-specific [Versioning](/README.md).
 - S6678: Use PascalCase for named placeholders
 - S6781: JWT secret keys should not be disclosed
 - S6930: Backslash should be avoided in route templates
-- S6931: ASP.NET controller actions should not have a route template starting with "/"
 - S6932: Use model binding instead of reading raw request data
 - S6934: A Route attribute should be added to the controller when a route template is specified at the action level
 - S6960: Controllers should not have mixed responsibilities

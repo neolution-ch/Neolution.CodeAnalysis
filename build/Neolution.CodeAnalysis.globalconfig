@@ -270,6 +270,10 @@ dotnet_diagnostic.S6605.severity = none
 ; Better readability of `First()` and `Last()` are preferred over performance gains
 dotnet_diagnostic.S6608.severity = none
 
+# S6931: ASP.NET controller actions should not have a route template starting with "/"
+; This rule has no effect for our projects, since we mainly use Endpoints which limits developers to only implement one action per "Controller".
+dotnet_diagnostic.S6931.severity = none
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 
