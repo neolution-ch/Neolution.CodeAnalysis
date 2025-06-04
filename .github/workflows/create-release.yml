@@ -5,7 +5,7 @@ on:
     inputs:
       release_type:
         type: choice
-        description: "Type of release to create"
+        description: Release Type
         default: stable
         options:
           - stable
@@ -15,21 +15,21 @@ on:
           
       version_bump:
         type: choice
-        description: "Which part of the version to increment"
+        description: Version Bump
         default: patch
         options:
           - patch
           - minor
           - major
-          
+
       continue_prerelease:
         type: boolean
-        description: "Continue an existing alpha/beta/rc series instead of starting a new one"
+        description: Continue existing prerelease (if available)
         default: false
-        
+
       is_dry_run:
         type: boolean
-        description: "Simulate the release without making any changes"
+        description: Dry Run
         default: false
 
 jobs:
