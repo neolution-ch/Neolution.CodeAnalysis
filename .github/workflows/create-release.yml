@@ -88,14 +88,14 @@ jobs:
             params+=(--release=${{ github.event.inputs.specific_version }})
           # Determine prerelease logic
           elif [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
-            params+=(--${{ github.event.inputs.version_bump }})
-          elif [[ "${{ github.event.inputs.continue_prerelease }}" == "true" ]]; then
+            params+=(--${{ github.event.inputs.version_bump }})          elif [[ "${{ github.event.inputs.continue_prerelease }}" == "true" ]]; then
             # Add verbose logging to understand release-it's process
             params+=(--verbose)
             # Tell release-it to use prerelease tags
             params+=(--preReleaseId=${{ github.event.inputs.release_type }})
             params+=(--increment=prerelease)
             params+=(--preRelease=${{ github.event.inputs.release_type }})
+            params+=(--git.tagMatch="v*-${{ github.event.inputs.release_type }}.*")
             params+=(--plugins.@release-it/keep-a-changelog.keepUnreleased)
             params+=(--no-plugins.@release-it/keep-a-changelog.strictLatest)
           else
