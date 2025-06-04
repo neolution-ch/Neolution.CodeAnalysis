@@ -27,7 +27,6 @@ and adheres to a project-specific [Versioning](/README.md).
 - S6674: Log message template should be syntactically correct
 - S6675: "Trace.WriteLineIf" should not be used with "TraceSwitch" levels
 - S6677: Message template placeholders should be unique
-- S6678: Use PascalCase for named placeholders
 - S6781: JWT secret keys should not be disclosed
 - S6930: Backslash should be avoided in route templates
 - S6932: Use model binding instead of reading raw request data
