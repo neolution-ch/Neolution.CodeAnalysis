@@ -58,7 +58,7 @@ jobs:
       - name: run release-it
         run: |
           params=()
-          # Determine prerelease logic
+          
           if [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
             params+=(--${{ github.event.inputs.version_bump }})
           elif [[ "${{ github.event.inputs.continue_prerelease }}" == "true" ]]; then
