@@ -81,14 +81,13 @@ jobs:
 
       - name: run release-it
         run: |
-          params=()
-
-          # Check if a specific version was provided
+          params=()          # Determine prerelease logic
           if [[ -n "${{ github.event.inputs.specific_version }}" ]]; then
             params+=(--release=${{ github.event.inputs.specific_version }})
           # Determine prerelease logic
           elif [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
-            params+=(--${{ github.event.inputs.version_bump }})          elif [[ "${{ github.event.inputs.continue_prerelease }}" == "true" ]]; then
+            params+=(--${{ github.event.inputs.version_bump }})
+          elif [[ "${{ github.event.inputs.continue_prerelease }}" == "true" ]]; then
             # Add verbose logging to understand release-it's process
             params+=(--verbose)
             # Tell release-it to use prerelease tags
