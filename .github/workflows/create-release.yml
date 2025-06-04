@@ -27,10 +27,14 @@ on:
         description: Continue existing prerelease (if available)
         default: false
 
+      specific_version:
+        type: string
+        description: Specify exact version (e.g., 3.3.0-alpha.1) - overrides other version settings
+        required: false
+
       is_dry_run:
         type: boolean
         description: Dry Run
-        default: false
 
 jobs:
   release-it:
@@ -48,6 +52,25 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
           fetch-depth: 0
 
+      - name: debug git tags
+        run: |
+          echo "All tags:"
+          git tag -l
+          echo "---"
+          echo "Tags sorted by version:"
+          git tag -l --sort=-v:refname
+          echo "---"
+          echo "Alpha tags sorted by version:"
+          git tag -l "*-alpha*" --sort=-v:refname
+          echo "---"
+          echo "Tag details:"
+          git for-each-ref --format="%(refname:short) %(objecttype) %(taggerdate)" refs/tags/
+          echo "---"
+          echo "Latest tag details:"
+          LATEST_TAG=$(git describe --tags --abbrev=0)
+          echo "Latest tag: $LATEST_TAG"
+          git show $LATEST_TAG
+
       - name: initialize mandatory git config
         run: |
           git config user.name "GitHub Release Bot"
@@ -60,10 +83,17 @@ jobs:
         run: |
           params=()
 
+          # Check if a specific version was provided
+          if [[ -n "${{ github.event.inputs.specific_version }}" ]]; then
+            params+=(--release=${{ github.event.inputs.specific_version }})
           # Determine prerelease logic
-          if [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
+          elif [[ "${{ github.event.inputs.release_type }}" == "stable" ]]; then
             params+=(--${{ github.event.inputs.version_bump }})
           elif [[ "${{ github.event.inputs.continue_prerelease }}" == "true" ]]; then
+            # Add verbose logging to understand release-it's process
+            params+=(--verbose)
+            # Tell release-it to use prerelease tags
+            params+=(--preReleaseId=${{ github.event.inputs.release_type }})
             params+=(--increment=prerelease)
             params+=(--preRelease=${{ github.event.inputs.release_type }})
             params+=(--plugins.@release-it/keep-a-changelog.keepUnreleased)
