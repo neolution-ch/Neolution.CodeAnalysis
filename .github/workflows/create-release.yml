@@ -13,19 +13,20 @@ on:
           - beta
           - rc
           
+      continue_prerelease:
+        type: boolean
+        description: |
+          Increase existing pre-release revision
+        default: false
+
       version_bump:
         type: choice
-        description: Version Bump
+        description: Bump version number
         default: patch
         options:
           - patch
           - minor
           - major
-
-      continue_prerelease:
-        type: boolean
-        description: Continue existing prerelease (if available)
-        default: false
 
       is_dry_run:
         type: boolean
