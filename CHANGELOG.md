@@ -35,7 +35,6 @@ and adheres to a project-specific [Versioning](/README.md).
 - S6960: Controllers should not have mixed responsibilities
 - S6961: API Controllers should derive from ControllerBase instead of Controller
 - S6962: You should pool HTTP connections with HttpClientFactory
-- S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.
 - S6965: REST API actions should be annotated with an HTTP verb attribute
 - S6966: Awaitable method should be used
 - S6967: ModelState.IsValid should be called in controller actions

@@ -1,4 +1,4 @@
-﻿# Top level entry required to mark this as a global AnalyzerConfig file
+# Top level entry required to mark this as a global AnalyzerConfig file
 # NOTE: Do not create section headers for configuration entries
 is_global = true
 
@@ -273,6 +273,10 @@ dotnet_diagnostic.S6608.severity = none
 # S6931: ASP.NET controller actions should not have a route template starting with "/"
 ; This rule has no effect for our projects, since we mainly use Endpoints which limits developers to only implement one action per "Controller".
 dotnet_diagnostic.S6931.severity = none
+
+# S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting
+; This is handled by a custom model binder in our project templates that produces a bad request response in case of under-posting 
+dotnet_diagnostic.S6964.severity = none
 
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
