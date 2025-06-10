@@ -10,7 +10,7 @@ and adheres to a project-specific [Versioning](/README.md).
 ### Fixed
 
 - Improved README by describing the purpose, usage, and versioning of the package.
-- Adds repository and icon information to the test ruleset NuGet package.
+- Added repository and icon information to the test ruleset NuGet package.
 
 ### Changed
 
