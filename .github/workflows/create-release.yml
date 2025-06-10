@@ -16,7 +16,7 @@ on:
       continue_prerelease:
         type: boolean
         description: |
-          Increase existing pre-release revision
+          No version number bump, increase pre-release revision instead.
         default: false
 
       version_bump:
