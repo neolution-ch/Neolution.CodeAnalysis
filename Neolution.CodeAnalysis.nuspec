@@ -24,5 +24,6 @@
     <file src="build\Neolution.CodeAnalysis.globalconfig" target="build\Neolution.CodeAnalysis.globalconfig" />
     <file src="build\stylecop.json" target="build\stylecop.json" />
     <file src="README.md" target="docs\" />
+    <file src="icon.png" target="" />
   </files>
 </package>

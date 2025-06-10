@@ -25,5 +25,6 @@
     <file src="build\Neolution.CodeAnalysis.TestsRuleset.globalconfig" target="build\Neolution.CodeAnalysis.TestsRuleset.globalconfig" />
     <file src="build\stylecop.json" target="build\stylecop.json" />
     <file src="README.md" target="docs\" />
+    <file src="icon.png" target="" />
   </files>
 </package>
