@@ -7,6 +7,11 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- Improved README by describing the purpose, usage, and versioning of the package.
+- Adds repository and icon information to the test ruleset NuGet package.
+
 ### Changed
 
 - Updated SonarAnalyzer.CSharp to version 9.32.0.97167

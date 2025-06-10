@@ -276,7 +276,7 @@ dotnet_diagnostic.S6931.severity = none
 
 # S6678: Use PascalCase for named placeholders
 ; Team decided that enforcing this rule is not worth the effort
-dotnet_diagnostic.S6678.severity = none
+dotnet_diagnostic.S6678.severity = suggestion
 
 # S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting
 ; This is handled by a custom model binder in our project templates that produces a bad request response in case of under-posting 

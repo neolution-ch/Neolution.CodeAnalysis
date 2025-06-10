@@ -7,6 +7,9 @@
     <authors>Neolution AG</authors>
     <description>Configures Code Analysis for Neolution Test Projects.</description>
     <projectUrl>https://github.com/neolution-ch/Neolution.CodeAnalysis</projectUrl>
+    <repository type="git" url="https://github.com/neolution-ch/Neolution.CodeAnalysis" />
+    <icon>icon.png</icon>
+    <tags>code analysis;roslyn;stylecop;sonar;ruleset</tags>
     <readme>docs\README.md</readme>
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
