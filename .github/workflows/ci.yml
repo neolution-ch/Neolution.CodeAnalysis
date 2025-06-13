@@ -9,7 +9,7 @@ on:
    
 jobs:
   pack:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # NuGet.exe is a Mono application on Linux and is not installed by default on `ubuntu-latest` runners
     steps:    
       - name: Checkout
         uses: actions/checkout@v3
@@ -21,7 +21,7 @@ jobs:
         run: 'sed -i -e "s/{{NuGetVersion}}/$NUGET_VERSION/g" *.nuspec'
 
       - name: Setup NuGet.exe for use with actions
-        uses: NuGet/setup-nuget@v1.2.0
+        uses: NuGet/setup-nuget@v2
           
       - name: Create main package
         run: nuget pack Neolution.CodeAnalysis.nuspec

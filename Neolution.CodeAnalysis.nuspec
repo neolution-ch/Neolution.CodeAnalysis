@@ -7,13 +7,16 @@
     <authors>Neolution AG</authors>
     <description>Configures Code Analysis for Neolution Projects</description>
     <projectUrl>https://github.com/neolution-ch/Neolution.CodeAnalysis</projectUrl>
+    <repository type="git" url="https://github.com/neolution-ch/Neolution.CodeAnalysis" />
+    <icon>icon.png</icon>
+    <tags>code analysis;roslyn;stylecop;sonar;ruleset</tags>
     <readme>docs\README.md</readme>
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <dependencies>
       <dependency id="StyleCop.Analyzers.Unstable" version="1.2.0.556" />
-      <dependency id="SonarAnalyzer.CSharp" version="9.20.0.85982" />
+      <dependency id="SonarAnalyzer.CSharp" version="9.32.0.97167" />
     </dependencies>
   </metadata>
   <files>
@@ -21,5 +24,6 @@
     <file src="build\Neolution.CodeAnalysis.globalconfig" target="build\Neolution.CodeAnalysis.globalconfig" />
     <file src="build\stylecop.json" target="build\stylecop.json" />
     <file src="README.md" target="docs\" />
+    <file src="icon.png" target="" />
   </files>
 </package>

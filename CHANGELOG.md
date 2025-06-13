@@ -7,6 +7,46 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Fixed
+
+- Improved README by describing the purpose, usage, and versioning of the package.
+- Added repository and icon information to the test ruleset NuGet package.
+
+### Changed
+
+- Updated SonarAnalyzer.CSharp to version 9.32.0.97167
+
+### Added
+
+- S2629: Logging templates should be constant
+- S3431: "[ExpectedException]" should not be used
+- S4347: Secure random number generators should not output predictable values
+- S5344: Passwords should not be stored in plaintext or with a fast hashing algorithm
+- S6377: XML signatures should be validated securely
+- S6667: Logging in a catch clause should pass the caught exception as a parameter.
+- S6668: Logging arguments should be passed to the correct parameter
+- S6670: "Trace.Write" and "Trace.WriteLine" should not be used
+- S6672: Generic logger injection should match enclosing type
+- S6673: Log message template placeholders should be in the right order
+- S6674: Log message template should be syntactically correct
+- S6675: "Trace.WriteLineIf" should not be used with "TraceSwitch" levels
+- S6677: Message template placeholders should be unique
+- S6781: JWT secret keys should not be disclosed
+- S6930: Backslash should be avoided in route templates
+- S6932: Use model binding instead of reading raw request data
+- S6934: A Route attribute should be added to the controller when a route template is specified at the action level
+- S6960: Controllers should not have mixed responsibilities
+- S6961: API Controllers should derive from ControllerBase instead of Controller
+- S6962: You should pool HTTP connections with HttpClientFactory
+- S6965: REST API actions should be annotated with an HTTP verb attribute
+- S6966: Awaitable method should be used
+- S6967: ModelState.IsValid should be called in controller actions
+- S6968: Actions that return a value should be annotated with ProducesResponseTypeAttribute containing the return type
+
+### Removed
+
+- S6803: Parameters with SupplyParameterFromQuery attribute should be used only in routable components
+
 ## [3.2.1] - 2024-11-18
 
 ### Fixed
