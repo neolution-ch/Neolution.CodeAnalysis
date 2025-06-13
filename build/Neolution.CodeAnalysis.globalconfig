@@ -282,6 +282,10 @@ dotnet_diagnostic.S6678.severity = suggestion
 ; This is handled by a custom model binder in our project templates that produces a bad request response in case of under-posting 
 dotnet_diagnostic.S6964.severity = none
 
+# S2139: Exceptions should be either logged or rethrown but not both
+; Although this rule makes sense, we do not want to enforce it
+dotnet_diagnostic.S2139.severity = suggestion
+
 # S107: Methods should not have too many parameters
 dotnet_diagnostic.S107.severity = warning
 

@@ -18,7 +18,6 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ### Added
 
-- S2139: Exceptions should be either logged or rethrown but not both
 - S2629: Logging templates should be constant
 - S3431: "[ExpectedException]" should not be used
 - S4347: Secure random number generators should not output predictable values
