@@ -5,12 +5,13 @@
     <version>{{NuGetVersion}}</version>
     <title>Neolution Code Analysis</title>
     <authors>Neolution AG</authors>
-    <description>Configures Code Analysis for Neolution Projects</description>
+    <description>Configures Code Analysis for Neolution Projects.</description>
     <projectUrl>https://github.com/neolution-ch/Neolution.CodeAnalysis</projectUrl>
     <readme>docs\README.md</readme>
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
+    <releaseNotes>See CHANGELOG.md for release notes and version history.</releaseNotes>
     <dependencies>
       <dependency id="StyleCop.Analyzers.Unstable" version="1.2.0.556" />
       <dependency id="SonarAnalyzer.CSharp" version="9.20.0.85982" />

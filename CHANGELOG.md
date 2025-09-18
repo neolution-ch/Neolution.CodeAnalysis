@@ -7,6 +7,11 @@ and adheres to a project-specific [Versioning](/README.md).
 
 ## [Unreleased]
 
+### Removed
+
+- [Tests ruleset] SA1615: Element return value should be documented
+- [Tests ruleset] S3900: Validate arguments of public methods
+
 ## [3.2.1] - 2024-11-18
 
 ### Fixed

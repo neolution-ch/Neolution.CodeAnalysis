@@ -44,3 +44,11 @@ dotnet_diagnostic.S4581.severity = suggestion
 # S4144: Methods should not have identical implementations
 ; When using parameterised tests it can make sense to have different test methods with different parametrization but using the same implementation.
 dotnet_diagnostic.S4144.severity = none
+
+# SA1615: Element return value should be documented
+; This adds no value in tests
+dotnet_diagnostic.SA1615.severity = none
+
+# Validate arguments of public methods
+; Generally adds limited value and can often be counterproductive in test projects
+dotnet_diagnostic.S3900.severity = none
